@@ -31,10 +31,7 @@ Please see the following for detailed descriptions of each type:
    ```
    
 ### Java
-
-1. Build the go code first (see above) so that all the imports are available
-
-2. Generate the Java code (optionally providing a target path as a directory)
+1. Generate the Java code (optionally providing a target path as a directory)
    ```
    ./generate-java.sh [TARGET_PATH]
    ```

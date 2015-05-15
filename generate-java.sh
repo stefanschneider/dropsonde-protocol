@@ -19,11 +19,11 @@ fi
 
 pushd events
 mkdir -p $TARGET
-protoc -I=. --java_out=$TARGET --proto_path=$GOPATH/src:$GOPATH/src/github.com/gogo/protobuf/protobuf:. *.proto
+protoc -I=. --java_out=$TARGET *.proto
 popd
 
 pushd control
 mkdir -p $TARGET
-protoc -I=. --java_out=$TARGET --proto_path=$GOPATH/src:$GOPATH/src/github.com/gogo/protobuf/protobuf:. *.proto
+protoc -I=. --java_out=$TARGET *.proto
 popd
 
