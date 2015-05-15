@@ -4,11 +4,6 @@ option java_outer_classname = "ContolMessageFactory";
 
 import "heartbeatrequest.proto";
 import "uuid.proto";
-import "github.com/gogo/protobuf/gogoproto/gogo.proto";
-
-option (gogoproto.marshaler_all) = true;
-option (gogoproto.sizer_all) = true;
-option (gogoproto.unmarshaler_all) = true;
 
 /// ControlMessage wraps a control command and adds metadata.
 message ControlMessage {
