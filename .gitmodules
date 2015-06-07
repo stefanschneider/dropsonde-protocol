@@ -1,0 +1,3 @@
+[submodule "csharp-out/Dropsonde/protobuf"]
+	path = csharp-out/Dropsonde/protobuf
+	url = https://github.com/google/protobuf
