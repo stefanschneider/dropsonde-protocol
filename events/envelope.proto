@@ -1,6 +1,9 @@
+syntax = "proto2";
+
 package events;
 option java_package = "org.cloudfoundry.dropsonde.events";
 option java_outer_classname = "EventFactory";
+option csharp_namespace = "CloudFoundry.Dropsonde.Events";
 
 import "heartbeat.proto";
 import "http.proto";
