@@ -19,6 +19,13 @@
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
+    <EnvironmentVariables>
+      <EnvironmentVariables>
+        <Variable name="CF_ACCESS_TOKEN" value="bearer asdf" />
+        <Variable name="APP_GUID" value="3dc77233-6a73-4719-8904-4f47a8d5ed2f" />
+        <Variable name="DOPPLER_ADDR" value="wss://doppler.run.pivotal.io:4443" />
+      </EnvironmentVariables>
+    </EnvironmentVariables>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>full</DebugType>
