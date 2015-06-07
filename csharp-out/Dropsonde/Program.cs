@@ -36,12 +36,13 @@ namespace Dropsonde
 
 				MemoryStream ms = new MemoryStream ();
 
-				ws.Options.SetBuffer (1024 * 1024 , 1024);
+				ws.Options.KeepAliveInterval = TimeSpan.FromDays (1);
+				ws.Options.SetBuffer (1024, 1024);
 				ws.ConnectAsync (streamUri, CancellationToken.None).Wait();
 				Console.WriteLine ("Connected. SubProtocol: {0}", ws.SubProtocol);
 
 				while (true) {
-					var bytesReceived = new ArraySegment<byte> (new byte[1024*1024]);
+					var bytesReceived = new ArraySegment<byte> (new byte[1024]);
 
 					WebSocketReceiveResult result = ws.ReceiveAsync (bytesReceived, CancellationToken.None).Result;
 
