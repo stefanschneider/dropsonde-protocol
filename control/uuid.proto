@@ -1,4 +1,7 @@
+syntax = "proto2";
+
 package control;
+option csharp_namespace = "CloudFoundry.Dropsonde.Control";
 
 /// Type representing a 128-bit UUID.
 //
