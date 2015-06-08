@@ -17,7 +17,11 @@ if [ -z "$TARGET" ]; then
 fi
 
 pushd events
-mkdir -p $TARGET
-protoc -I=. --csharp_out=$TARGET *.proto
+mkdir -p $TARGET/Events
+protoc -I=. --csharp_out=$TARGET/Events *.proto
 popd
 
+pushd control
+mkdir -p $TARGET/Control
+protoc -I=. --csharp_out=$TARGET/Control *.proto
+popd

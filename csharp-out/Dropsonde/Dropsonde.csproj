@@ -42,31 +42,41 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\Envelope.cs">
-      <Link>CloudFoundry.Dropsonde.Events\Envelope.cs</Link>
+    <Compile Include="..\Control\Uuid.cs">
+      <Link>CloudFoundry.Dropsonde.Control\Uuid.cs</Link>
     </Compile>
-    <Compile Include="..\Error.cs">
-      <Link>CloudFoundry.Dropsonde.Events\Error.cs</Link>
+    <Compile Include="..\Control\Heartbeatrequest.cs">
+      <Link>CloudFoundry.Dropsonde.Control\Heartbeatrequest.cs</Link>
     </Compile>
-    <Compile Include="..\Heartbeat.cs">
-      <Link>CloudFoundry.Dropsonde.Events\Heartbeat.cs</Link>
+    <Compile Include="..\Control\Controlmessage.cs">
+      <Link>CloudFoundry.Dropsonde.Control\Controlmessage.cs</Link>
     </Compile>
-    <Compile Include="..\Http.cs">
-      <Link>CloudFoundry.Dropsonde.Events\Http.cs</Link>
+    <Compile Include="..\Events\Uuid.cs">
+      <Link>CloudFoundry.Dropsonde.Events\Uuid.cs</Link>
     </Compile>
-    <Compile Include="..\Log.cs">
-      <Link>CloudFoundry.Dropsonde.Events\Log.cs</Link>
-    </Compile>
-    <Compile Include="..\Metric.cs">
+    <Compile Include="..\Events\Metric.cs">
       <Link>CloudFoundry.Dropsonde.Events\Metric.cs</Link>
     </Compile>
-    <Compile Include="..\Uuid.cs">
-      <Link>CloudFoundry.Dropsonde.Events\Uuid.cs</Link>
+    <Compile Include="..\Events\Log.cs">
+      <Link>CloudFoundry.Dropsonde.Events\Log.cs</Link>
+    </Compile>
+    <Compile Include="..\Events\Http.cs">
+      <Link>CloudFoundry.Dropsonde.Events\Http.cs</Link>
+    </Compile>
+    <Compile Include="..\Events\Heartbeat.cs">
+      <Link>CloudFoundry.Dropsonde.Events\Heartbeat.cs</Link>
+    </Compile>
+    <Compile Include="..\Events\Error.cs">
+      <Link>CloudFoundry.Dropsonde.Events\Error.cs</Link>
+    </Compile>
+    <Compile Include="..\Events\Envelope.cs">
+      <Link>CloudFoundry.Dropsonde.Events\Envelope.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="CloudFoundry.Dropsonde.Events\" />
+    <Folder Include="CloudFoundry.Dropsonde.Control\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="protobuf\csharp\src\ProtocolBuffers\ProtocolBuffers.csproj">
