@@ -20,8 +20,3 @@ pushd events
 mkdir -p $TARGET/Events
 protoc -I=. --csharp_out=$TARGET/Events *.proto
 popd
-
-pushd control
-mkdir -p $TARGET/Control
-protoc -I=. --csharp_out=$TARGET/Control *.proto
-popd
