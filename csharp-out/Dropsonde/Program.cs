@@ -25,8 +25,8 @@ namespace Dropsonde
 		private static void ChatWithDoppler ()
 		{
 			using (var ws = new ClientWebSocket ()) {
-				
-				ws.Options.SetRequestHeader ("AUTHORIZATION", authToken.Trim ());
+				ws.Options.SetRequestHeader ("Authorization", authToken.Trim ());
+				ws.Options.SetRequestHeader ("Origin", "http://localhost");
 				Uri serverUri = new Uri (dopplerAddr);
 
 				var streamUriBuilder = new UriBuilder (serverUri);
@@ -36,24 +36,27 @@ namespace Dropsonde
 
 				MemoryStream ms = new MemoryStream ();
 
-				ws.Options.KeepAliveInterval = TimeSpan.FromDays (1);
-				ws.Options.SetBuffer (1024, 1024);
-				ws.ConnectAsync (streamUri, CancellationToken.None).Wait();
+				// ws.Options.KeepAliveInterval = TimeSpan.FromDays (1);
+				// ws.Options.SetBuffer (1024, 1024);
+				ws.ConnectAsync (streamUri, CancellationToken.None).Wait ();
 				Console.WriteLine ("Connected. SubProtocol: {0}", ws.SubProtocol);
 
+
 				while (true) {
-					var bytesReceived = new ArraySegment<byte> (new byte[1024]);
+
+					var bytesReceived = new ArraySegment<byte> (new byte[128]);
+
 
 					WebSocketReceiveResult result = ws.ReceiveAsync (bytesReceived, CancellationToken.None).Result;
 
 					ms.Write (bytesReceived.Array, 0, result.Count);
 
-					if (result.EndOfMessage) {
+					if (result.EndOfMessage && result.MessageType == WebSocketMessageType.Binary) {
 						ms.Seek (0, SeekOrigin.Begin);
 
 						try {
 							
-							var envelope = Envelope.ParseFrom (ms);
+							var envelope = Envelope.Parser.ParseFrom (ms);
 							Console.WriteLine (envelope.ToString ());
 
 						} catch (Exception ex) {
