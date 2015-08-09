@@ -1,4 +1,4 @@
-syntax = "proto2";
+syntax = "proto3";
 
 package events;
 
@@ -8,7 +8,7 @@ option csharp_namespace = "CloudFoundry.Dropsonde.Events";
 
 /// An Error event represents an error in the originating process.
 message Error {
-    required string source = 1;  /// Source of the error. This may or may not be the same as the Origin in the envelope.
-    required int32 code = 2;     /// Numeric error code. This is provided for programmatic responses to the error.
-    required string message = 3; /// Error description (preferably human-readable).
+    string source = 1;  /// Source of the error. This may or may not be the same as the Origin in the envelope.
+    int32 code = 2;     /// Numeric error code. This is provided for programmatic responses to the error.
+    string message = 3; /// Error description (preferably human-readable).
 }
