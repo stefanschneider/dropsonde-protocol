@@ -3,1254 +3,557 @@
 #pragma warning disable 1591, 0612, 3021
 #region Designer generated code
 
-using pb = global::Google.ProtocolBuffers;
-using pbc = global::Google.ProtocolBuffers.Collections;
-using pbd = global::Google.ProtocolBuffers.Descriptors;
+using pb = global::Google.Protobuf;
+using pbc = global::Google.Protobuf.Collections;
+using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace CloudFoundry.Dropsonde.Events {
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class Metric {
 
-    #region Extension registration
-    public static void RegisterAllExtensions(pb::ExtensionRegistry registry) {
-    }
-    #endregion
-    #region Static variables
-    internal static pbd::MessageDescriptor internal__static_events_ValueMetric__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.ValueMetric, global::CloudFoundry.Dropsonde.Events.ValueMetric.Builder> internal__static_events_ValueMetric__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_events_CounterEvent__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.CounterEvent, global::CloudFoundry.Dropsonde.Events.CounterEvent.Builder> internal__static_events_CounterEvent__FieldAccessorTable;
-    internal static pbd::MessageDescriptor internal__static_events_ContainerMetric__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.ContainerMetric, global::CloudFoundry.Dropsonde.Events.ContainerMetric.Builder> internal__static_events_ContainerMetric__FieldAccessorTable;
-    #endregion
     #region Descriptor
-    public static pbd::FileDescriptor Descriptor {
+    public static pbr::FileDescriptor Descriptor {
       get { return descriptor; }
     }
-    private static pbd::FileDescriptor descriptor;
+    private static pbr::FileDescriptor descriptor;
 
     static Metric() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgxtZXRyaWMucHJvdG8SBmV2ZW50cxoKdXVpZC5wcm90byI4CgtWYWx1ZU1l", 
-            "dHJpYxIMCgRuYW1lGAEgAigJEg0KBXZhbHVlGAIgAigBEgwKBHVuaXQYAyAC", 
-            "KAkiOgoMQ291bnRlckV2ZW50EgwKBG5hbWUYASACKAkSDQoFZGVsdGEYAiAC", 
+            "dHJpYxIMCgRuYW1lGAEgASgJEg0KBXZhbHVlGAIgASgBEgwKBHVuaXQYAyAB", 
+            "KAkiOgoMQ291bnRlckV2ZW50EgwKBG5hbWUYASABKAkSDQoFZGVsdGEYAiAB", 
             "KAQSDQoFdG90YWwYAyABKAQifgoPQ29udGFpbmVyTWV0cmljEhUKDWFwcGxp", 
-            "Y2F0aW9uSWQYASACKAkSFQoNaW5zdGFuY2VJbmRleBgCIAIoBRIVCg1jcHVQ", 
-            "ZXJjZW50YWdlGAMgAigBEhMKC21lbW9yeUJ5dGVzGAQgAigEEhEKCWRpc2tC", 
-            "eXRlcxgFIAIoBEJSCiFvcmcuY2xvdWRmb3VuZHJ5LmRyb3Bzb25kZS5ldmVu", 
+            "Y2F0aW9uSWQYASABKAkSFQoNaW5zdGFuY2VJbmRleBgCIAEoBRIVCg1jcHVQ", 
+            "ZXJjZW50YWdlGAMgASgBEhMKC21lbW9yeUJ5dGVzGAQgASgEEhEKCWRpc2tC", 
+            "eXRlcxgFIAEoBEJSCiFvcmcuY2xvdWRmb3VuZHJ5LmRyb3Bzb25kZS5ldmVu", 
             "dHNCDU1ldHJpY0ZhY3RvcnmqAh1DbG91ZEZvdW5kcnkuRHJvcHNvbmRlLkV2", 
-          "ZW50cw=="));
-      pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
-        descriptor = root;
-        internal__static_events_ValueMetric__Descriptor = Descriptor.MessageTypes[0];
-        internal__static_events_ValueMetric__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.ValueMetric, global::CloudFoundry.Dropsonde.Events.ValueMetric.Builder>(internal__static_events_ValueMetric__Descriptor,
-                new string[] { "Name", "Value", "Unit", });
-        internal__static_events_CounterEvent__Descriptor = Descriptor.MessageTypes[1];
-        internal__static_events_CounterEvent__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.CounterEvent, global::CloudFoundry.Dropsonde.Events.CounterEvent.Builder>(internal__static_events_CounterEvent__Descriptor,
-                new string[] { "Name", "Delta", "Total", });
-        internal__static_events_ContainerMetric__Descriptor = Descriptor.MessageTypes[2];
-        internal__static_events_ContainerMetric__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.ContainerMetric, global::CloudFoundry.Dropsonde.Events.ContainerMetric.Builder>(internal__static_events_ContainerMetric__Descriptor,
-                new string[] { "ApplicationId", "InstanceIndex", "CpuPercentage", "MemoryBytes", "DiskBytes", });
-        pb::ExtensionRegistry registry = pb::ExtensionRegistry.CreateInstance();
-        RegisterAllExtensions(registry);
-        global::CloudFoundry.Dropsonde.Events.Uuid.RegisterAllExtensions(registry);
-        return registry;
-      };
-      pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-          new pbd::FileDescriptor[] {
-          global::CloudFoundry.Dropsonde.Events.Uuid.Descriptor, 
-          }, assigner);
+            "ZW50c2IGcHJvdG8z"));
+      descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
+          new pbr::FileDescriptor[] { global::CloudFoundry.Dropsonde.Events.Uuid.Descriptor, },
+          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
+            new pbr::GeneratedCodeInfo(typeof(global::CloudFoundry.Dropsonde.Events.ValueMetric), new[]{ "Name", "Value", "Unit" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::CloudFoundry.Dropsonde.Events.CounterEvent), new[]{ "Name", "Delta", "Total" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::CloudFoundry.Dropsonde.Events.ContainerMetric), new[]{ "ApplicationId", "InstanceIndex", "CpuPercentage", "MemoryBytes", "DiskBytes" }, null, null, null)
+          }));
     }
     #endregion
 
   }
   #region Messages
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class ValueMetric : pb::GeneratedMessage<ValueMetric, ValueMetric.Builder> {
-    private ValueMetric() { }
-    private static readonly ValueMetric defaultInstance = new ValueMetric().MakeReadOnly();
-    private static readonly string[] _valueMetricFieldNames = new string[] { "name", "unit", "value" };
-    private static readonly uint[] _valueMetricFieldTags = new uint[] { 10, 26, 17 };
-    public static ValueMetric DefaultInstance {
-      get { return defaultInstance; }
+  public sealed partial class ValueMetric : pb::IMessage<ValueMetric> {
+    private static readonly pb::MessageParser<ValueMetric> _parser = new pb::MessageParser<ValueMetric>(() => new ValueMetric());
+    public static pb::MessageParser<ValueMetric> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CloudFoundry.Dropsonde.Events.Metric.Descriptor.MessageTypes[0]; }
     }
 
-    public override ValueMetric DefaultInstanceForType {
-      get { return DefaultInstance; }
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
     }
 
-    protected override ValueMetric ThisMessage {
-      get { return this; }
+    public ValueMetric() {
+      OnConstruction();
     }
 
-    public static pbd::MessageDescriptor Descriptor {
-      get { return global::CloudFoundry.Dropsonde.Events.Metric.internal__static_events_ValueMetric__Descriptor; }
+    partial void OnConstruction();
+
+    public ValueMetric(ValueMetric other) : this() {
+      name_ = other.name_;
+      value_ = other.value_;
+      unit_ = other.unit_;
     }
 
-    protected override pb::FieldAccess.FieldAccessorTable<ValueMetric, ValueMetric.Builder> InternalFieldAccessors {
-      get { return global::CloudFoundry.Dropsonde.Events.Metric.internal__static_events_ValueMetric__FieldAccessorTable; }
+    public ValueMetric Clone() {
+      return new ValueMetric(this);
     }
 
     public const int NameFieldNumber = 1;
-    private bool hasName;
     private string name_ = "";
-    public bool HasName {
-      get { return hasName; }
-    }
     public string Name {
       get { return name_; }
+      set {
+        name_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
     }
 
     public const int ValueFieldNumber = 2;
-    private bool hasValue;
     private double value_;
-    public bool HasValue {
-      get { return hasValue; }
-    }
     public double Value {
       get { return value_; }
+      set {
+        value_ = value;
+      }
     }
 
     public const int UnitFieldNumber = 3;
-    private bool hasUnit;
     private string unit_ = "";
-    public bool HasUnit {
-      get { return hasUnit; }
-    }
     public string Unit {
       get { return unit_; }
+      set {
+        unit_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
     }
 
-    public override bool IsInitialized {
-      get {
-        if (!hasName) return false;
-        if (!hasValue) return false;
-        if (!hasUnit) return false;
+    public override bool Equals(object other) {
+      return Equals(other as ValueMetric);
+    }
+
+    public bool Equals(ValueMetric other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
+      if (Value != other.Value) return false;
+      if (Unit != other.Unit) return false;
+      return true;
     }
 
-    public override void WriteTo(pb::ICodedOutputStream output) {
-      CalcSerializedSize();
-      string[] field_names = _valueMetricFieldNames;
-      if (hasName) {
-        output.WriteString(1, field_names[0], Name);
-      }
-      if (hasValue) {
-        output.WriteDouble(2, field_names[2], Value);
-      }
-      if (hasUnit) {
-        output.WriteString(3, field_names[1], Unit);
-      }
-      UnknownFields.WriteTo(output);
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Value != 0D) hash ^= Value.GetHashCode();
+      if (Unit.Length != 0) hash ^= Unit.GetHashCode();
+      return hash;
     }
 
-    private int memoizedSerializedSize = -1;
-    public override int SerializedSize {
-      get {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-        return CalcSerializedSize();
+    public override string ToString() {
+      return pb::JsonFormatter.Default.Format(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Value != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Value);
+      }
+      if (Unit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Unit);
       }
     }
 
-    private int CalcSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (hasName) {
-        size += pb::CodedOutputStream.ComputeStringSize(1, Name);
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (hasValue) {
-        size += pb::CodedOutputStream.ComputeDoubleSize(2, Value);
+      if (Value != 0D) {
+        size += 1 + 8;
       }
-      if (hasUnit) {
-        size += pb::CodedOutputStream.ComputeStringSize(3, Unit);
+      if (Unit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Unit);
       }
-      size += UnknownFields.SerializedSize;
-      memoizedSerializedSize = size;
       return size;
     }
-    public static ValueMetric ParseFrom(pb::ByteString data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static ValueMetric ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static ValueMetric ParseFrom(byte[] data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static ValueMetric ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static ValueMetric ParseFrom(global::System.IO.Stream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static ValueMetric ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    public static ValueMetric ParseDelimitedFrom(global::System.IO.Stream input) {
-      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
-    }
-    public static ValueMetric ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
-    }
-    public static ValueMetric ParseFrom(pb::ICodedInputStream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static ValueMetric ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    private ValueMetric MakeReadOnly() {
-      return this;
+
+    public void MergeFrom(ValueMetric other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Value != 0D) {
+        Value = other.Value;
+      }
+      if (other.Unit.Length != 0) {
+        Unit = other.Unit;
+      }
     }
 
-    public static Builder CreateBuilder() { return new Builder(); }
-    public override Builder ToBuilder() { return CreateBuilder(this); }
-    public override Builder CreateBuilderForType() { return new Builder(); }
-    public static Builder CreateBuilder(ValueMetric prototype) {
-      return new Builder(prototype);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public sealed partial class Builder : pb::GeneratedBuilder<ValueMetric, Builder> {
-      protected override Builder ThisBuilder {
-        get { return this; }
-      }
-      public Builder() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-      }
-      internal Builder(ValueMetric cloneFrom) {
-        result = cloneFrom;
-        resultIsReadOnly = true;
-      }
-
-      private bool resultIsReadOnly;
-      private ValueMetric result;
-
-      private ValueMetric PrepareBuilder() {
-        if (resultIsReadOnly) {
-          ValueMetric original = result;
-          result = new ValueMetric();
-          resultIsReadOnly = false;
-          MergeFrom(original);
-        }
-        return result;
-      }
-
-      public override bool IsInitialized {
-        get { return result.IsInitialized; }
-      }
-
-      protected override ValueMetric MessageBeingBuilt {
-        get { return PrepareBuilder(); }
-      }
-
-      public override Builder Clear() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-        return this;
-      }
-
-      public override Builder Clone() {
-        if (resultIsReadOnly) {
-          return new Builder(result);
-        } else {
-          return new Builder().MergeFrom(result);
-        }
-      }
-
-      public override pbd::MessageDescriptor DescriptorForType {
-        get { return global::CloudFoundry.Dropsonde.Events.ValueMetric.Descriptor; }
-      }
-
-      public override ValueMetric DefaultInstanceForType {
-        get { return global::CloudFoundry.Dropsonde.Events.ValueMetric.DefaultInstance; }
-      }
-
-      public override ValueMetric BuildPartial() {
-        if (resultIsReadOnly) {
-          return result;
-        }
-        resultIsReadOnly = true;
-        return result.MakeReadOnly();
-      }
-
-      public override Builder MergeFrom(pb::IMessage other) {
-        if (other is ValueMetric) {
-          return MergeFrom((ValueMetric) other);
-        } else {
-          base.MergeFrom(other);
-          return this;
-        }
-      }
-
-      public override Builder MergeFrom(ValueMetric other) {
-        if (other == global::CloudFoundry.Dropsonde.Events.ValueMetric.DefaultInstance) return this;
-        PrepareBuilder();
-        if (other.HasName) {
-          Name = other.Name;
-        }
-        if (other.HasValue) {
-          Value = other.Value;
-        }
-        if (other.HasUnit) {
-          Unit = other.Unit;
-        }
-        this.MergeUnknownFields(other.UnknownFields);
-        return this;
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input) {
-        return MergeFrom(input, pb::ExtensionRegistry.Empty);
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-        PrepareBuilder();
-        pb::UnknownFieldSet.Builder unknownFields = null;
-        uint tag;
-        string field_name;
-        while (input.ReadTag(out tag, out field_name)) {
-          if(tag == 0 && field_name != null) {
-            int field_ordinal = global::System.Array.BinarySearch(_valueMetricFieldNames, field_name, global::System.StringComparer.Ordinal);
-            if(field_ordinal >= 0)
-              tag = _valueMetricFieldTags[field_ordinal];
-            else {
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              continue;
-            }
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
           }
-          switch (tag) {
-            case 0: {
-              throw pb::InvalidProtocolBufferException.InvalidTag();
-            }
-            default: {
-              if (pb::WireFormat.IsEndGroupTag(tag)) {
-                if (unknownFields != null) {
-                  this.UnknownFields = unknownFields.Build();
-                }
-                return this;
-              }
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              break;
-            }
-            case 10: {
-              result.hasName = input.ReadString(ref result.name_);
-              break;
-            }
-            case 17: {
-              result.hasValue = input.ReadDouble(ref result.value_);
-              break;
-            }
-            case 26: {
-              result.hasUnit = input.ReadString(ref result.unit_);
-              break;
-            }
+          case 17: {
+            Value = input.ReadDouble();
+            break;
+          }
+          case 26: {
+            Unit = input.ReadString();
+            break;
           }
         }
-
-        if (unknownFields != null) {
-          this.UnknownFields = unknownFields.Build();
-        }
-        return this;
-      }
-
-
-      public bool HasName {
-        get { return result.hasName; }
-      }
-      public string Name {
-        get { return result.Name; }
-        set { SetName(value); }
-      }
-      public Builder SetName(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasName = true;
-        result.name_ = value;
-        return this;
-      }
-      public Builder ClearName() {
-        PrepareBuilder();
-        result.hasName = false;
-        result.name_ = "";
-        return this;
-      }
-
-      public bool HasValue {
-        get { return result.hasValue; }
-      }
-      public double Value {
-        get { return result.Value; }
-        set { SetValue(value); }
-      }
-      public Builder SetValue(double value) {
-        PrepareBuilder();
-        result.hasValue = true;
-        result.value_ = value;
-        return this;
-      }
-      public Builder ClearValue() {
-        PrepareBuilder();
-        result.hasValue = false;
-        result.value_ = 0D;
-        return this;
-      }
-
-      public bool HasUnit {
-        get { return result.hasUnit; }
-      }
-      public string Unit {
-        get { return result.Unit; }
-        set { SetUnit(value); }
-      }
-      public Builder SetUnit(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasUnit = true;
-        result.unit_ = value;
-        return this;
-      }
-      public Builder ClearUnit() {
-        PrepareBuilder();
-        result.hasUnit = false;
-        result.unit_ = "";
-        return this;
       }
     }
-    static ValueMetric() {
-      object.ReferenceEquals(global::CloudFoundry.Dropsonde.Events.Metric.Descriptor, null);
-    }
+
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class CounterEvent : pb::GeneratedMessage<CounterEvent, CounterEvent.Builder> {
-    private CounterEvent() { }
-    private static readonly CounterEvent defaultInstance = new CounterEvent().MakeReadOnly();
-    private static readonly string[] _counterEventFieldNames = new string[] { "delta", "name", "total" };
-    private static readonly uint[] _counterEventFieldTags = new uint[] { 16, 10, 24 };
-    public static CounterEvent DefaultInstance {
-      get { return defaultInstance; }
+  public sealed partial class CounterEvent : pb::IMessage<CounterEvent> {
+    private static readonly pb::MessageParser<CounterEvent> _parser = new pb::MessageParser<CounterEvent>(() => new CounterEvent());
+    public static pb::MessageParser<CounterEvent> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CloudFoundry.Dropsonde.Events.Metric.Descriptor.MessageTypes[1]; }
     }
 
-    public override CounterEvent DefaultInstanceForType {
-      get { return DefaultInstance; }
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
     }
 
-    protected override CounterEvent ThisMessage {
-      get { return this; }
+    public CounterEvent() {
+      OnConstruction();
     }
 
-    public static pbd::MessageDescriptor Descriptor {
-      get { return global::CloudFoundry.Dropsonde.Events.Metric.internal__static_events_CounterEvent__Descriptor; }
+    partial void OnConstruction();
+
+    public CounterEvent(CounterEvent other) : this() {
+      name_ = other.name_;
+      delta_ = other.delta_;
+      total_ = other.total_;
     }
 
-    protected override pb::FieldAccess.FieldAccessorTable<CounterEvent, CounterEvent.Builder> InternalFieldAccessors {
-      get { return global::CloudFoundry.Dropsonde.Events.Metric.internal__static_events_CounterEvent__FieldAccessorTable; }
+    public CounterEvent Clone() {
+      return new CounterEvent(this);
     }
 
     public const int NameFieldNumber = 1;
-    private bool hasName;
     private string name_ = "";
-    public bool HasName {
-      get { return hasName; }
-    }
     public string Name {
       get { return name_; }
+      set {
+        name_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
     }
 
     public const int DeltaFieldNumber = 2;
-    private bool hasDelta;
     private ulong delta_;
-    public bool HasDelta {
-      get { return hasDelta; }
-    }
     public ulong Delta {
       get { return delta_; }
+      set {
+        delta_ = value;
+      }
     }
 
     public const int TotalFieldNumber = 3;
-    private bool hasTotal;
     private ulong total_;
-    public bool HasTotal {
-      get { return hasTotal; }
-    }
     public ulong Total {
       get { return total_; }
+      set {
+        total_ = value;
+      }
     }
 
-    public override bool IsInitialized {
-      get {
-        if (!hasName) return false;
-        if (!hasDelta) return false;
+    public override bool Equals(object other) {
+      return Equals(other as CounterEvent);
+    }
+
+    public bool Equals(CounterEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
+      if (Delta != other.Delta) return false;
+      if (Total != other.Total) return false;
+      return true;
     }
 
-    public override void WriteTo(pb::ICodedOutputStream output) {
-      CalcSerializedSize();
-      string[] field_names = _counterEventFieldNames;
-      if (hasName) {
-        output.WriteString(1, field_names[1], Name);
-      }
-      if (hasDelta) {
-        output.WriteUInt64(2, field_names[0], Delta);
-      }
-      if (hasTotal) {
-        output.WriteUInt64(3, field_names[2], Total);
-      }
-      UnknownFields.WriteTo(output);
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Delta != 0UL) hash ^= Delta.GetHashCode();
+      if (Total != 0UL) hash ^= Total.GetHashCode();
+      return hash;
     }
 
-    private int memoizedSerializedSize = -1;
-    public override int SerializedSize {
-      get {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-        return CalcSerializedSize();
+    public override string ToString() {
+      return pb::JsonFormatter.Default.Format(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Delta != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Delta);
+      }
+      if (Total != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Total);
       }
     }
 
-    private int CalcSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (hasName) {
-        size += pb::CodedOutputStream.ComputeStringSize(1, Name);
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (hasDelta) {
-        size += pb::CodedOutputStream.ComputeUInt64Size(2, Delta);
+      if (Delta != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Delta);
       }
-      if (hasTotal) {
-        size += pb::CodedOutputStream.ComputeUInt64Size(3, Total);
+      if (Total != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Total);
       }
-      size += UnknownFields.SerializedSize;
-      memoizedSerializedSize = size;
       return size;
     }
-    public static CounterEvent ParseFrom(pb::ByteString data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static CounterEvent ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static CounterEvent ParseFrom(byte[] data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static CounterEvent ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static CounterEvent ParseFrom(global::System.IO.Stream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static CounterEvent ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    public static CounterEvent ParseDelimitedFrom(global::System.IO.Stream input) {
-      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
-    }
-    public static CounterEvent ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
-    }
-    public static CounterEvent ParseFrom(pb::ICodedInputStream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static CounterEvent ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    private CounterEvent MakeReadOnly() {
-      return this;
+
+    public void MergeFrom(CounterEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Delta != 0UL) {
+        Delta = other.Delta;
+      }
+      if (other.Total != 0UL) {
+        Total = other.Total;
+      }
     }
 
-    public static Builder CreateBuilder() { return new Builder(); }
-    public override Builder ToBuilder() { return CreateBuilder(this); }
-    public override Builder CreateBuilderForType() { return new Builder(); }
-    public static Builder CreateBuilder(CounterEvent prototype) {
-      return new Builder(prototype);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public sealed partial class Builder : pb::GeneratedBuilder<CounterEvent, Builder> {
-      protected override Builder ThisBuilder {
-        get { return this; }
-      }
-      public Builder() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-      }
-      internal Builder(CounterEvent cloneFrom) {
-        result = cloneFrom;
-        resultIsReadOnly = true;
-      }
-
-      private bool resultIsReadOnly;
-      private CounterEvent result;
-
-      private CounterEvent PrepareBuilder() {
-        if (resultIsReadOnly) {
-          CounterEvent original = result;
-          result = new CounterEvent();
-          resultIsReadOnly = false;
-          MergeFrom(original);
-        }
-        return result;
-      }
-
-      public override bool IsInitialized {
-        get { return result.IsInitialized; }
-      }
-
-      protected override CounterEvent MessageBeingBuilt {
-        get { return PrepareBuilder(); }
-      }
-
-      public override Builder Clear() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-        return this;
-      }
-
-      public override Builder Clone() {
-        if (resultIsReadOnly) {
-          return new Builder(result);
-        } else {
-          return new Builder().MergeFrom(result);
-        }
-      }
-
-      public override pbd::MessageDescriptor DescriptorForType {
-        get { return global::CloudFoundry.Dropsonde.Events.CounterEvent.Descriptor; }
-      }
-
-      public override CounterEvent DefaultInstanceForType {
-        get { return global::CloudFoundry.Dropsonde.Events.CounterEvent.DefaultInstance; }
-      }
-
-      public override CounterEvent BuildPartial() {
-        if (resultIsReadOnly) {
-          return result;
-        }
-        resultIsReadOnly = true;
-        return result.MakeReadOnly();
-      }
-
-      public override Builder MergeFrom(pb::IMessage other) {
-        if (other is CounterEvent) {
-          return MergeFrom((CounterEvent) other);
-        } else {
-          base.MergeFrom(other);
-          return this;
-        }
-      }
-
-      public override Builder MergeFrom(CounterEvent other) {
-        if (other == global::CloudFoundry.Dropsonde.Events.CounterEvent.DefaultInstance) return this;
-        PrepareBuilder();
-        if (other.HasName) {
-          Name = other.Name;
-        }
-        if (other.HasDelta) {
-          Delta = other.Delta;
-        }
-        if (other.HasTotal) {
-          Total = other.Total;
-        }
-        this.MergeUnknownFields(other.UnknownFields);
-        return this;
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input) {
-        return MergeFrom(input, pb::ExtensionRegistry.Empty);
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-        PrepareBuilder();
-        pb::UnknownFieldSet.Builder unknownFields = null;
-        uint tag;
-        string field_name;
-        while (input.ReadTag(out tag, out field_name)) {
-          if(tag == 0 && field_name != null) {
-            int field_ordinal = global::System.Array.BinarySearch(_counterEventFieldNames, field_name, global::System.StringComparer.Ordinal);
-            if(field_ordinal >= 0)
-              tag = _counterEventFieldTags[field_ordinal];
-            else {
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              continue;
-            }
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
           }
-          switch (tag) {
-            case 0: {
-              throw pb::InvalidProtocolBufferException.InvalidTag();
-            }
-            default: {
-              if (pb::WireFormat.IsEndGroupTag(tag)) {
-                if (unknownFields != null) {
-                  this.UnknownFields = unknownFields.Build();
-                }
-                return this;
-              }
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              break;
-            }
-            case 10: {
-              result.hasName = input.ReadString(ref result.name_);
-              break;
-            }
-            case 16: {
-              result.hasDelta = input.ReadUInt64(ref result.delta_);
-              break;
-            }
-            case 24: {
-              result.hasTotal = input.ReadUInt64(ref result.total_);
-              break;
-            }
+          case 16: {
+            Delta = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            Total = input.ReadUInt64();
+            break;
           }
         }
-
-        if (unknownFields != null) {
-          this.UnknownFields = unknownFields.Build();
-        }
-        return this;
-      }
-
-
-      public bool HasName {
-        get { return result.hasName; }
-      }
-      public string Name {
-        get { return result.Name; }
-        set { SetName(value); }
-      }
-      public Builder SetName(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasName = true;
-        result.name_ = value;
-        return this;
-      }
-      public Builder ClearName() {
-        PrepareBuilder();
-        result.hasName = false;
-        result.name_ = "";
-        return this;
-      }
-
-      public bool HasDelta {
-        get { return result.hasDelta; }
-      }
-      public ulong Delta {
-        get { return result.Delta; }
-        set { SetDelta(value); }
-      }
-      public Builder SetDelta(ulong value) {
-        PrepareBuilder();
-        result.hasDelta = true;
-        result.delta_ = value;
-        return this;
-      }
-      public Builder ClearDelta() {
-        PrepareBuilder();
-        result.hasDelta = false;
-        result.delta_ = 0UL;
-        return this;
-      }
-
-      public bool HasTotal {
-        get { return result.hasTotal; }
-      }
-      public ulong Total {
-        get { return result.Total; }
-        set { SetTotal(value); }
-      }
-      public Builder SetTotal(ulong value) {
-        PrepareBuilder();
-        result.hasTotal = true;
-        result.total_ = value;
-        return this;
-      }
-      public Builder ClearTotal() {
-        PrepareBuilder();
-        result.hasTotal = false;
-        result.total_ = 0UL;
-        return this;
       }
     }
-    static CounterEvent() {
-      object.ReferenceEquals(global::CloudFoundry.Dropsonde.Events.Metric.Descriptor, null);
-    }
+
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class ContainerMetric : pb::GeneratedMessage<ContainerMetric, ContainerMetric.Builder> {
-    private ContainerMetric() { }
-    private static readonly ContainerMetric defaultInstance = new ContainerMetric().MakeReadOnly();
-    private static readonly string[] _containerMetricFieldNames = new string[] { "applicationId", "cpuPercentage", "diskBytes", "instanceIndex", "memoryBytes" };
-    private static readonly uint[] _containerMetricFieldTags = new uint[] { 10, 25, 40, 16, 32 };
-    public static ContainerMetric DefaultInstance {
-      get { return defaultInstance; }
+  public sealed partial class ContainerMetric : pb::IMessage<ContainerMetric> {
+    private static readonly pb::MessageParser<ContainerMetric> _parser = new pb::MessageParser<ContainerMetric>(() => new ContainerMetric());
+    public static pb::MessageParser<ContainerMetric> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CloudFoundry.Dropsonde.Events.Metric.Descriptor.MessageTypes[2]; }
     }
 
-    public override ContainerMetric DefaultInstanceForType {
-      get { return DefaultInstance; }
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
     }
 
-    protected override ContainerMetric ThisMessage {
-      get { return this; }
+    public ContainerMetric() {
+      OnConstruction();
     }
 
-    public static pbd::MessageDescriptor Descriptor {
-      get { return global::CloudFoundry.Dropsonde.Events.Metric.internal__static_events_ContainerMetric__Descriptor; }
+    partial void OnConstruction();
+
+    public ContainerMetric(ContainerMetric other) : this() {
+      applicationId_ = other.applicationId_;
+      instanceIndex_ = other.instanceIndex_;
+      cpuPercentage_ = other.cpuPercentage_;
+      memoryBytes_ = other.memoryBytes_;
+      diskBytes_ = other.diskBytes_;
     }
 
-    protected override pb::FieldAccess.FieldAccessorTable<ContainerMetric, ContainerMetric.Builder> InternalFieldAccessors {
-      get { return global::CloudFoundry.Dropsonde.Events.Metric.internal__static_events_ContainerMetric__FieldAccessorTable; }
+    public ContainerMetric Clone() {
+      return new ContainerMetric(this);
     }
 
     public const int ApplicationIdFieldNumber = 1;
-    private bool hasApplicationId;
     private string applicationId_ = "";
-    public bool HasApplicationId {
-      get { return hasApplicationId; }
-    }
     public string ApplicationId {
       get { return applicationId_; }
+      set {
+        applicationId_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
     }
 
     public const int InstanceIndexFieldNumber = 2;
-    private bool hasInstanceIndex;
     private int instanceIndex_;
-    public bool HasInstanceIndex {
-      get { return hasInstanceIndex; }
-    }
     public int InstanceIndex {
       get { return instanceIndex_; }
+      set {
+        instanceIndex_ = value;
+      }
     }
 
     public const int CpuPercentageFieldNumber = 3;
-    private bool hasCpuPercentage;
     private double cpuPercentage_;
-    public bool HasCpuPercentage {
-      get { return hasCpuPercentage; }
-    }
     public double CpuPercentage {
       get { return cpuPercentage_; }
+      set {
+        cpuPercentage_ = value;
+      }
     }
 
     public const int MemoryBytesFieldNumber = 4;
-    private bool hasMemoryBytes;
     private ulong memoryBytes_;
-    public bool HasMemoryBytes {
-      get { return hasMemoryBytes; }
-    }
     public ulong MemoryBytes {
       get { return memoryBytes_; }
+      set {
+        memoryBytes_ = value;
+      }
     }
 
     public const int DiskBytesFieldNumber = 5;
-    private bool hasDiskBytes;
     private ulong diskBytes_;
-    public bool HasDiskBytes {
-      get { return hasDiskBytes; }
-    }
     public ulong DiskBytes {
       get { return diskBytes_; }
+      set {
+        diskBytes_ = value;
+      }
     }
 
-    public override bool IsInitialized {
-      get {
-        if (!hasApplicationId) return false;
-        if (!hasInstanceIndex) return false;
-        if (!hasCpuPercentage) return false;
-        if (!hasMemoryBytes) return false;
-        if (!hasDiskBytes) return false;
+    public override bool Equals(object other) {
+      return Equals(other as ContainerMetric);
+    }
+
+    public bool Equals(ContainerMetric other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ApplicationId != other.ApplicationId) return false;
+      if (InstanceIndex != other.InstanceIndex) return false;
+      if (CpuPercentage != other.CpuPercentage) return false;
+      if (MemoryBytes != other.MemoryBytes) return false;
+      if (DiskBytes != other.DiskBytes) return false;
+      return true;
     }
 
-    public override void WriteTo(pb::ICodedOutputStream output) {
-      CalcSerializedSize();
-      string[] field_names = _containerMetricFieldNames;
-      if (hasApplicationId) {
-        output.WriteString(1, field_names[0], ApplicationId);
-      }
-      if (hasInstanceIndex) {
-        output.WriteInt32(2, field_names[3], InstanceIndex);
-      }
-      if (hasCpuPercentage) {
-        output.WriteDouble(3, field_names[1], CpuPercentage);
-      }
-      if (hasMemoryBytes) {
-        output.WriteUInt64(4, field_names[4], MemoryBytes);
-      }
-      if (hasDiskBytes) {
-        output.WriteUInt64(5, field_names[2], DiskBytes);
-      }
-      UnknownFields.WriteTo(output);
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ApplicationId.Length != 0) hash ^= ApplicationId.GetHashCode();
+      if (InstanceIndex != 0) hash ^= InstanceIndex.GetHashCode();
+      if (CpuPercentage != 0D) hash ^= CpuPercentage.GetHashCode();
+      if (MemoryBytes != 0UL) hash ^= MemoryBytes.GetHashCode();
+      if (DiskBytes != 0UL) hash ^= DiskBytes.GetHashCode();
+      return hash;
     }
 
-    private int memoizedSerializedSize = -1;
-    public override int SerializedSize {
-      get {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-        return CalcSerializedSize();
+    public override string ToString() {
+      return pb::JsonFormatter.Default.Format(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ApplicationId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApplicationId);
+      }
+      if (InstanceIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(InstanceIndex);
+      }
+      if (CpuPercentage != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(CpuPercentage);
+      }
+      if (MemoryBytes != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(MemoryBytes);
+      }
+      if (DiskBytes != 0UL) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(DiskBytes);
       }
     }
 
-    private int CalcSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (hasApplicationId) {
-        size += pb::CodedOutputStream.ComputeStringSize(1, ApplicationId);
+    public int CalculateSize() {
+      int size = 0;
+      if (ApplicationId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplicationId);
       }
-      if (hasInstanceIndex) {
-        size += pb::CodedOutputStream.ComputeInt32Size(2, InstanceIndex);
+      if (InstanceIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(InstanceIndex);
       }
-      if (hasCpuPercentage) {
-        size += pb::CodedOutputStream.ComputeDoubleSize(3, CpuPercentage);
+      if (CpuPercentage != 0D) {
+        size += 1 + 8;
       }
-      if (hasMemoryBytes) {
-        size += pb::CodedOutputStream.ComputeUInt64Size(4, MemoryBytes);
+      if (MemoryBytes != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(MemoryBytes);
       }
-      if (hasDiskBytes) {
-        size += pb::CodedOutputStream.ComputeUInt64Size(5, DiskBytes);
+      if (DiskBytes != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(DiskBytes);
       }
-      size += UnknownFields.SerializedSize;
-      memoizedSerializedSize = size;
       return size;
     }
-    public static ContainerMetric ParseFrom(pb::ByteString data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static ContainerMetric ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static ContainerMetric ParseFrom(byte[] data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static ContainerMetric ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static ContainerMetric ParseFrom(global::System.IO.Stream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static ContainerMetric ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    public static ContainerMetric ParseDelimitedFrom(global::System.IO.Stream input) {
-      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
-    }
-    public static ContainerMetric ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
-    }
-    public static ContainerMetric ParseFrom(pb::ICodedInputStream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static ContainerMetric ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    private ContainerMetric MakeReadOnly() {
-      return this;
+
+    public void MergeFrom(ContainerMetric other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ApplicationId.Length != 0) {
+        ApplicationId = other.ApplicationId;
+      }
+      if (other.InstanceIndex != 0) {
+        InstanceIndex = other.InstanceIndex;
+      }
+      if (other.CpuPercentage != 0D) {
+        CpuPercentage = other.CpuPercentage;
+      }
+      if (other.MemoryBytes != 0UL) {
+        MemoryBytes = other.MemoryBytes;
+      }
+      if (other.DiskBytes != 0UL) {
+        DiskBytes = other.DiskBytes;
+      }
     }
 
-    public static Builder CreateBuilder() { return new Builder(); }
-    public override Builder ToBuilder() { return CreateBuilder(this); }
-    public override Builder CreateBuilderForType() { return new Builder(); }
-    public static Builder CreateBuilder(ContainerMetric prototype) {
-      return new Builder(prototype);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public sealed partial class Builder : pb::GeneratedBuilder<ContainerMetric, Builder> {
-      protected override Builder ThisBuilder {
-        get { return this; }
-      }
-      public Builder() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-      }
-      internal Builder(ContainerMetric cloneFrom) {
-        result = cloneFrom;
-        resultIsReadOnly = true;
-      }
-
-      private bool resultIsReadOnly;
-      private ContainerMetric result;
-
-      private ContainerMetric PrepareBuilder() {
-        if (resultIsReadOnly) {
-          ContainerMetric original = result;
-          result = new ContainerMetric();
-          resultIsReadOnly = false;
-          MergeFrom(original);
-        }
-        return result;
-      }
-
-      public override bool IsInitialized {
-        get { return result.IsInitialized; }
-      }
-
-      protected override ContainerMetric MessageBeingBuilt {
-        get { return PrepareBuilder(); }
-      }
-
-      public override Builder Clear() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-        return this;
-      }
-
-      public override Builder Clone() {
-        if (resultIsReadOnly) {
-          return new Builder(result);
-        } else {
-          return new Builder().MergeFrom(result);
-        }
-      }
-
-      public override pbd::MessageDescriptor DescriptorForType {
-        get { return global::CloudFoundry.Dropsonde.Events.ContainerMetric.Descriptor; }
-      }
-
-      public override ContainerMetric DefaultInstanceForType {
-        get { return global::CloudFoundry.Dropsonde.Events.ContainerMetric.DefaultInstance; }
-      }
-
-      public override ContainerMetric BuildPartial() {
-        if (resultIsReadOnly) {
-          return result;
-        }
-        resultIsReadOnly = true;
-        return result.MakeReadOnly();
-      }
-
-      public override Builder MergeFrom(pb::IMessage other) {
-        if (other is ContainerMetric) {
-          return MergeFrom((ContainerMetric) other);
-        } else {
-          base.MergeFrom(other);
-          return this;
-        }
-      }
-
-      public override Builder MergeFrom(ContainerMetric other) {
-        if (other == global::CloudFoundry.Dropsonde.Events.ContainerMetric.DefaultInstance) return this;
-        PrepareBuilder();
-        if (other.HasApplicationId) {
-          ApplicationId = other.ApplicationId;
-        }
-        if (other.HasInstanceIndex) {
-          InstanceIndex = other.InstanceIndex;
-        }
-        if (other.HasCpuPercentage) {
-          CpuPercentage = other.CpuPercentage;
-        }
-        if (other.HasMemoryBytes) {
-          MemoryBytes = other.MemoryBytes;
-        }
-        if (other.HasDiskBytes) {
-          DiskBytes = other.DiskBytes;
-        }
-        this.MergeUnknownFields(other.UnknownFields);
-        return this;
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input) {
-        return MergeFrom(input, pb::ExtensionRegistry.Empty);
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-        PrepareBuilder();
-        pb::UnknownFieldSet.Builder unknownFields = null;
-        uint tag;
-        string field_name;
-        while (input.ReadTag(out tag, out field_name)) {
-          if(tag == 0 && field_name != null) {
-            int field_ordinal = global::System.Array.BinarySearch(_containerMetricFieldNames, field_name, global::System.StringComparer.Ordinal);
-            if(field_ordinal >= 0)
-              tag = _containerMetricFieldTags[field_ordinal];
-            else {
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              continue;
-            }
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            ApplicationId = input.ReadString();
+            break;
           }
-          switch (tag) {
-            case 0: {
-              throw pb::InvalidProtocolBufferException.InvalidTag();
-            }
-            default: {
-              if (pb::WireFormat.IsEndGroupTag(tag)) {
-                if (unknownFields != null) {
-                  this.UnknownFields = unknownFields.Build();
-                }
-                return this;
-              }
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              break;
-            }
-            case 10: {
-              result.hasApplicationId = input.ReadString(ref result.applicationId_);
-              break;
-            }
-            case 16: {
-              result.hasInstanceIndex = input.ReadInt32(ref result.instanceIndex_);
-              break;
-            }
-            case 25: {
-              result.hasCpuPercentage = input.ReadDouble(ref result.cpuPercentage_);
-              break;
-            }
-            case 32: {
-              result.hasMemoryBytes = input.ReadUInt64(ref result.memoryBytes_);
-              break;
-            }
-            case 40: {
-              result.hasDiskBytes = input.ReadUInt64(ref result.diskBytes_);
-              break;
-            }
+          case 16: {
+            InstanceIndex = input.ReadInt32();
+            break;
+          }
+          case 25: {
+            CpuPercentage = input.ReadDouble();
+            break;
+          }
+          case 32: {
+            MemoryBytes = input.ReadUInt64();
+            break;
+          }
+          case 40: {
+            DiskBytes = input.ReadUInt64();
+            break;
           }
         }
-
-        if (unknownFields != null) {
-          this.UnknownFields = unknownFields.Build();
-        }
-        return this;
-      }
-
-
-      public bool HasApplicationId {
-        get { return result.hasApplicationId; }
-      }
-      public string ApplicationId {
-        get { return result.ApplicationId; }
-        set { SetApplicationId(value); }
-      }
-      public Builder SetApplicationId(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasApplicationId = true;
-        result.applicationId_ = value;
-        return this;
-      }
-      public Builder ClearApplicationId() {
-        PrepareBuilder();
-        result.hasApplicationId = false;
-        result.applicationId_ = "";
-        return this;
-      }
-
-      public bool HasInstanceIndex {
-        get { return result.hasInstanceIndex; }
-      }
-      public int InstanceIndex {
-        get { return result.InstanceIndex; }
-        set { SetInstanceIndex(value); }
-      }
-      public Builder SetInstanceIndex(int value) {
-        PrepareBuilder();
-        result.hasInstanceIndex = true;
-        result.instanceIndex_ = value;
-        return this;
-      }
-      public Builder ClearInstanceIndex() {
-        PrepareBuilder();
-        result.hasInstanceIndex = false;
-        result.instanceIndex_ = 0;
-        return this;
-      }
-
-      public bool HasCpuPercentage {
-        get { return result.hasCpuPercentage; }
-      }
-      public double CpuPercentage {
-        get { return result.CpuPercentage; }
-        set { SetCpuPercentage(value); }
-      }
-      public Builder SetCpuPercentage(double value) {
-        PrepareBuilder();
-        result.hasCpuPercentage = true;
-        result.cpuPercentage_ = value;
-        return this;
-      }
-      public Builder ClearCpuPercentage() {
-        PrepareBuilder();
-        result.hasCpuPercentage = false;
-        result.cpuPercentage_ = 0D;
-        return this;
-      }
-
-      public bool HasMemoryBytes {
-        get { return result.hasMemoryBytes; }
-      }
-      public ulong MemoryBytes {
-        get { return result.MemoryBytes; }
-        set { SetMemoryBytes(value); }
-      }
-      public Builder SetMemoryBytes(ulong value) {
-        PrepareBuilder();
-        result.hasMemoryBytes = true;
-        result.memoryBytes_ = value;
-        return this;
-      }
-      public Builder ClearMemoryBytes() {
-        PrepareBuilder();
-        result.hasMemoryBytes = false;
-        result.memoryBytes_ = 0UL;
-        return this;
-      }
-
-      public bool HasDiskBytes {
-        get { return result.hasDiskBytes; }
-      }
-      public ulong DiskBytes {
-        get { return result.DiskBytes; }
-        set { SetDiskBytes(value); }
-      }
-      public Builder SetDiskBytes(ulong value) {
-        PrepareBuilder();
-        result.hasDiskBytes = true;
-        result.diskBytes_ = value;
-        return this;
-      }
-      public Builder ClearDiskBytes() {
-        PrepareBuilder();
-        result.hasDiskBytes = false;
-        result.diskBytes_ = 0UL;
-        return this;
       }
     }
-    static ContainerMetric() {
-      object.ReferenceEquals(global::CloudFoundry.Dropsonde.Events.Metric.Descriptor, null);
-    }
+
   }
 
   #endregion

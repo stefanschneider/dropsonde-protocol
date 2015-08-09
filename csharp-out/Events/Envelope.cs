@@ -3,9 +3,9 @@
 #pragma warning disable 1591, 0612, 3021
 #region Designer generated code
 
-using pb = global::Google.ProtocolBuffers;
-using pbc = global::Google.ProtocolBuffers.Collections;
-using pbd = global::Google.ProtocolBuffers.Descriptors;
+using pb = global::Google.Protobuf;
+using pbc = global::Google.Protobuf.Collections;
+using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace CloudFoundry.Dropsonde.Events {
 
@@ -14,65 +14,39 @@ namespace CloudFoundry.Dropsonde.Events {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Envelope {
 
-      #region Extension registration
-      public static void RegisterAllExtensions(pb::ExtensionRegistry registry) {
-      }
-      #endregion
-      #region Static variables
-      internal static pbd::MessageDescriptor internal__static_events_Envelope__Descriptor;
-      internal static pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.Envelope, global::CloudFoundry.Dropsonde.Events.Envelope.Builder> internal__static_events_Envelope__FieldAccessorTable;
-      #endregion
       #region Descriptor
-      public static pbd::FileDescriptor Descriptor {
+      public static pbr::FileDescriptor Descriptor {
         get { return descriptor; }
       }
-      private static pbd::FileDescriptor descriptor;
+      private static pbr::FileDescriptor descriptor;
 
       static Envelope() {
         byte[] descriptorData = global::System.Convert.FromBase64String(
             string.Concat(
-              "Cg5lbnZlbG9wZS5wcm90bxIGZXZlbnRzGg9oZWFydGJlYXQucHJvdG8aCmh0", 
-              "dHAucHJvdG8aCWxvZy5wcm90bxoMbWV0cmljLnByb3RvGgtlcnJvci5wcm90", 
-              "byKkBQoIRW52ZWxvcGUSDgoGb3JpZ2luGAEgAigJEi0KCWV2ZW50VHlwZRgC", 
-              "IAIoDjIaLmV2ZW50cy5FbnZlbG9wZS5FdmVudFR5cGUSEQoJdGltZXN0YW1w", 
-              "GAYgASgDEhIKCmRlcGxveW1lbnQYDSABKAkSCwoDam9iGA4gASgJEg0KBWlu", 
-              "ZGV4GA8gASgJEgoKAmlwGBAgASgJEiQKCWhlYXJ0YmVhdBgDIAEoCzIRLmV2", 
-              "ZW50cy5IZWFydGJlYXQSJAoJaHR0cFN0YXJ0GAQgASgLMhEuZXZlbnRzLkh0", 
-              "dHBTdGFydBIiCghodHRwU3RvcBgFIAEoCzIQLmV2ZW50cy5IdHRwU3RvcBIs", 
-              "Cg1odHRwU3RhcnRTdG9wGAcgASgLMhUuZXZlbnRzLkh0dHBTdGFydFN0b3AS", 
-              "JgoKbG9nTWVzc2FnZRgIIAEoCzISLmV2ZW50cy5Mb2dNZXNzYWdlEigKC3Zh", 
-              "bHVlTWV0cmljGAkgASgLMhMuZXZlbnRzLlZhbHVlTWV0cmljEioKDGNvdW50", 
-              "ZXJFdmVudBgKIAEoCzIULmV2ZW50cy5Db3VudGVyRXZlbnQSHAoFZXJyb3IY", 
-              "CyABKAsyDS5ldmVudHMuRXJyb3ISMAoPY29udGFpbmVyTWV0cmljGAwgASgL", 
-              "MhcuZXZlbnRzLkNvbnRhaW5lck1ldHJpYyKdAQoJRXZlbnRUeXBlEg0KCUhl", 
-              "YXJ0YmVhdBABEg0KCUh0dHBTdGFydBACEgwKCEh0dHBTdG9wEAMSEQoNSHR0", 
-              "cFN0YXJ0U3RvcBAEEg4KCkxvZ01lc3NhZ2UQBRIPCgtWYWx1ZU1ldHJpYxAG", 
-              "EhAKDENvdW50ZXJFdmVudBAHEgkKBUVycm9yEAgSEwoPQ29udGFpbmVyTWV0", 
-              "cmljEAlCUQohb3JnLmNsb3VkZm91bmRyeS5kcm9wc29uZGUuZXZlbnRzQgxF", 
-            "dmVudEZhY3RvcnmqAh1DbG91ZEZvdW5kcnkuRHJvcHNvbmRlLkV2ZW50cw=="));
-        pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
-          descriptor = root;
-          internal__static_events_Envelope__Descriptor = Descriptor.MessageTypes[0];
-          internal__static_events_Envelope__FieldAccessorTable = 
-              new pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.Envelope, global::CloudFoundry.Dropsonde.Events.Envelope.Builder>(internal__static_events_Envelope__Descriptor,
-                  new string[] { "Origin", "EventType", "Timestamp", "Deployment", "Job", "Index", "Ip", "Heartbeat", "HttpStart", "HttpStop", "HttpStartStop", "LogMessage", "ValueMetric", "CounterEvent", "Error", "ContainerMetric", });
-          pb::ExtensionRegistry registry = pb::ExtensionRegistry.CreateInstance();
-          RegisterAllExtensions(registry);
-          global::CloudFoundry.Dropsonde.Events.Proto.Heartbeat.RegisterAllExtensions(registry);
-          global::CloudFoundry.Dropsonde.Events.Http.RegisterAllExtensions(registry);
-          global::CloudFoundry.Dropsonde.Events.Log.RegisterAllExtensions(registry);
-          global::CloudFoundry.Dropsonde.Events.Metric.RegisterAllExtensions(registry);
-          global::CloudFoundry.Dropsonde.Events.Proto.Error.RegisterAllExtensions(registry);
-          return registry;
-        };
-        pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-            new pbd::FileDescriptor[] {
-            global::CloudFoundry.Dropsonde.Events.Proto.Heartbeat.Descriptor, 
-            global::CloudFoundry.Dropsonde.Events.Http.Descriptor, 
-            global::CloudFoundry.Dropsonde.Events.Log.Descriptor, 
-            global::CloudFoundry.Dropsonde.Events.Metric.Descriptor, 
-            global::CloudFoundry.Dropsonde.Events.Proto.Error.Descriptor, 
-            }, assigner);
+              "Cg5lbnZlbG9wZS5wcm90bxIGZXZlbnRzGgpodHRwLnByb3RvGglsb2cucHJv", 
+              "dG8aDG1ldHJpYy5wcm90bxoLZXJyb3IucHJvdG8igwUKCEVudmVsb3BlEg4K", 
+              "Bm9yaWdpbhgBIAEoCRItCglldmVudFR5cGUYAiABKA4yGi5ldmVudHMuRW52", 
+              "ZWxvcGUuRXZlbnRUeXBlEhEKCXRpbWVzdGFtcBgGIAEoAxISCgpkZXBsb3lt", 
+              "ZW50GA0gASgJEgsKA2pvYhgOIAEoCRINCgVpbmRleBgPIAEoCRIKCgJpcBgQ", 
+              "IAEoCRIkCglodHRwU3RhcnQYBCABKAsyES5ldmVudHMuSHR0cFN0YXJ0EiIK", 
+              "CGh0dHBTdG9wGAUgASgLMhAuZXZlbnRzLkh0dHBTdG9wEiwKDWh0dHBTdGFy", 
+              "dFN0b3AYByABKAsyFS5ldmVudHMuSHR0cFN0YXJ0U3RvcBImCgpsb2dNZXNz", 
+              "YWdlGAggASgLMhIuZXZlbnRzLkxvZ01lc3NhZ2USKAoLdmFsdWVNZXRyaWMY", 
+              "CSABKAsyEy5ldmVudHMuVmFsdWVNZXRyaWMSKgoMY291bnRlckV2ZW50GAog", 
+              "ASgLMhQuZXZlbnRzLkNvdW50ZXJFdmVudBIcCgVlcnJvchgLIAEoCzINLmV2", 
+              "ZW50cy5FcnJvchIwCg9jb250YWluZXJNZXRyaWMYDCABKAsyFy5ldmVudHMu", 
+              "Q29udGFpbmVyTWV0cmljIqIBCglFdmVudFR5cGUSEgoOTk9ORV9FVkVOVFRZ", 
+              "UEUQABINCglIdHRwU3RhcnQQAhIMCghIdHRwU3RvcBADEhEKDUh0dHBTdGFy", 
+              "dFN0b3AQBBIOCgpMb2dNZXNzYWdlEAUSDwoLVmFsdWVNZXRyaWMQBhIQCgxD", 
+              "b3VudGVyRXZlbnQQBxIJCgVFcnJvchAIEhMKD0NvbnRhaW5lck1ldHJpYxAJ", 
+              "QlEKIW9yZy5jbG91ZGZvdW5kcnkuZHJvcHNvbmRlLmV2ZW50c0IMRXZlbnRG", 
+              "YWN0b3J5qgIdQ2xvdWRGb3VuZHJ5LkRyb3Bzb25kZS5FdmVudHNiBnByb3Rv", 
+              "Mw=="));
+        descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
+            new pbr::FileDescriptor[] { global::CloudFoundry.Dropsonde.Events.Http.Descriptor, global::CloudFoundry.Dropsonde.Events.Log.Descriptor, global::CloudFoundry.Dropsonde.Events.Metric.Descriptor, global::CloudFoundry.Dropsonde.Events.Proto.Error.Descriptor, },
+            new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
+              new pbr::GeneratedCodeInfo(typeof(global::CloudFoundry.Dropsonde.Events.Envelope), new[]{ "Origin", "EventType", "Timestamp", "Deployment", "Job", "Index", "Ip", "HttpStart", "HttpStop", "HttpStartStop", "LogMessage", "ValueMetric", "CounterEvent", "Error", "ContainerMetric" }, null, new[]{ typeof(global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType) }, null)
+            }));
       }
       #endregion
 
@@ -80,36 +54,522 @@ namespace CloudFoundry.Dropsonde.Events {
   }
   #region Messages
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class Envelope : pb::GeneratedMessage<Envelope, Envelope.Builder> {
-    private Envelope() { }
-    private static readonly Envelope defaultInstance = new Envelope().MakeReadOnly();
-    private static readonly string[] _envelopeFieldNames = new string[] { "containerMetric", "counterEvent", "deployment", "error", "eventType", "heartbeat", "httpStart", "httpStartStop", "httpStop", "index", "ip", "job", "logMessage", "origin", "timestamp", "valueMetric" };
-    private static readonly uint[] _envelopeFieldTags = new uint[] { 98, 82, 106, 90, 16, 26, 34, 58, 42, 122, 130, 114, 66, 10, 48, 74 };
-    public static Envelope DefaultInstance {
-      get { return defaultInstance; }
+  public sealed partial class Envelope : pb::IMessage<Envelope> {
+    private static readonly pb::MessageParser<Envelope> _parser = new pb::MessageParser<Envelope>(() => new Envelope());
+    public static pb::MessageParser<Envelope> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CloudFoundry.Dropsonde.Events.Proto.Envelope.Descriptor.MessageTypes[0]; }
     }
 
-    public override Envelope DefaultInstanceForType {
-      get { return DefaultInstance; }
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
     }
 
-    protected override Envelope ThisMessage {
-      get { return this; }
+    public Envelope() {
+      OnConstruction();
     }
 
-    public static pbd::MessageDescriptor Descriptor {
-      get { return global::CloudFoundry.Dropsonde.Events.Proto.Envelope.internal__static_events_Envelope__Descriptor; }
+    partial void OnConstruction();
+
+    public Envelope(Envelope other) : this() {
+      origin_ = other.origin_;
+      eventType_ = other.eventType_;
+      timestamp_ = other.timestamp_;
+      deployment_ = other.deployment_;
+      job_ = other.job_;
+      index_ = other.index_;
+      ip_ = other.ip_;
+      HttpStart = other.httpStart_ != null ? other.HttpStart.Clone() : null;
+      HttpStop = other.httpStop_ != null ? other.HttpStop.Clone() : null;
+      HttpStartStop = other.httpStartStop_ != null ? other.HttpStartStop.Clone() : null;
+      LogMessage = other.logMessage_ != null ? other.LogMessage.Clone() : null;
+      ValueMetric = other.valueMetric_ != null ? other.ValueMetric.Clone() : null;
+      CounterEvent = other.counterEvent_ != null ? other.CounterEvent.Clone() : null;
+      Error = other.error_ != null ? other.Error.Clone() : null;
+      ContainerMetric = other.containerMetric_ != null ? other.ContainerMetric.Clone() : null;
     }
 
-    protected override pb::FieldAccess.FieldAccessorTable<Envelope, Envelope.Builder> InternalFieldAccessors {
-      get { return global::CloudFoundry.Dropsonde.Events.Proto.Envelope.internal__static_events_Envelope__FieldAccessorTable; }
+    public Envelope Clone() {
+      return new Envelope(this);
+    }
+
+    public const int OriginFieldNumber = 1;
+    private string origin_ = "";
+    public string Origin {
+      get { return origin_; }
+      set {
+        origin_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public const int EventTypeFieldNumber = 2;
+    private global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType eventType_ = global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType.NONE_EVENTTYPE;
+    public global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType EventType {
+      get { return eventType_; }
+      set {
+        eventType_ = value;
+      }
+    }
+
+    public const int TimestampFieldNumber = 6;
+    private long timestamp_;
+    public long Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
+      }
+    }
+
+    public const int DeploymentFieldNumber = 13;
+    private string deployment_ = "";
+    public string Deployment {
+      get { return deployment_; }
+      set {
+        deployment_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public const int JobFieldNumber = 14;
+    private string job_ = "";
+    public string Job {
+      get { return job_; }
+      set {
+        job_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public const int IndexFieldNumber = 15;
+    private string index_ = "";
+    public string Index {
+      get { return index_; }
+      set {
+        index_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public const int IpFieldNumber = 16;
+    private string ip_ = "";
+    public string Ip {
+      get { return ip_; }
+      set {
+        ip_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public const int HttpStartFieldNumber = 4;
+    private global::CloudFoundry.Dropsonde.Events.HttpStart httpStart_;
+    public global::CloudFoundry.Dropsonde.Events.HttpStart HttpStart {
+      get { return httpStart_; }
+      set {
+        httpStart_ = value;
+      }
+    }
+
+    public const int HttpStopFieldNumber = 5;
+    private global::CloudFoundry.Dropsonde.Events.HttpStop httpStop_;
+    public global::CloudFoundry.Dropsonde.Events.HttpStop HttpStop {
+      get { return httpStop_; }
+      set {
+        httpStop_ = value;
+      }
+    }
+
+    public const int HttpStartStopFieldNumber = 7;
+    private global::CloudFoundry.Dropsonde.Events.HttpStartStop httpStartStop_;
+    public global::CloudFoundry.Dropsonde.Events.HttpStartStop HttpStartStop {
+      get { return httpStartStop_; }
+      set {
+        httpStartStop_ = value;
+      }
+    }
+
+    public const int LogMessageFieldNumber = 8;
+    private global::CloudFoundry.Dropsonde.Events.LogMessage logMessage_;
+    public global::CloudFoundry.Dropsonde.Events.LogMessage LogMessage {
+      get { return logMessage_; }
+      set {
+        logMessage_ = value;
+      }
+    }
+
+    public const int ValueMetricFieldNumber = 9;
+    private global::CloudFoundry.Dropsonde.Events.ValueMetric valueMetric_;
+    public global::CloudFoundry.Dropsonde.Events.ValueMetric ValueMetric {
+      get { return valueMetric_; }
+      set {
+        valueMetric_ = value;
+      }
+    }
+
+    public const int CounterEventFieldNumber = 10;
+    private global::CloudFoundry.Dropsonde.Events.CounterEvent counterEvent_;
+    public global::CloudFoundry.Dropsonde.Events.CounterEvent CounterEvent {
+      get { return counterEvent_; }
+      set {
+        counterEvent_ = value;
+      }
+    }
+
+    public const int ErrorFieldNumber = 11;
+    private global::CloudFoundry.Dropsonde.Events.Error error_;
+    public global::CloudFoundry.Dropsonde.Events.Error Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    public const int ContainerMetricFieldNumber = 12;
+    private global::CloudFoundry.Dropsonde.Events.ContainerMetric containerMetric_;
+    public global::CloudFoundry.Dropsonde.Events.ContainerMetric ContainerMetric {
+      get { return containerMetric_; }
+      set {
+        containerMetric_ = value;
+      }
+    }
+
+    public override bool Equals(object other) {
+      return Equals(other as Envelope);
+    }
+
+    public bool Equals(Envelope other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Origin != other.Origin) return false;
+      if (EventType != other.EventType) return false;
+      if (Timestamp != other.Timestamp) return false;
+      if (Deployment != other.Deployment) return false;
+      if (Job != other.Job) return false;
+      if (Index != other.Index) return false;
+      if (Ip != other.Ip) return false;
+      if (!object.Equals(HttpStart, other.HttpStart)) return false;
+      if (!object.Equals(HttpStop, other.HttpStop)) return false;
+      if (!object.Equals(HttpStartStop, other.HttpStartStop)) return false;
+      if (!object.Equals(LogMessage, other.LogMessage)) return false;
+      if (!object.Equals(ValueMetric, other.ValueMetric)) return false;
+      if (!object.Equals(CounterEvent, other.CounterEvent)) return false;
+      if (!object.Equals(Error, other.Error)) return false;
+      if (!object.Equals(ContainerMetric, other.ContainerMetric)) return false;
+      return true;
+    }
+
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Origin.Length != 0) hash ^= Origin.GetHashCode();
+      if (EventType != global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType.NONE_EVENTTYPE) hash ^= EventType.GetHashCode();
+      if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
+      if (Deployment.Length != 0) hash ^= Deployment.GetHashCode();
+      if (Job.Length != 0) hash ^= Job.GetHashCode();
+      if (Index.Length != 0) hash ^= Index.GetHashCode();
+      if (Ip.Length != 0) hash ^= Ip.GetHashCode();
+      if (httpStart_ != null) hash ^= HttpStart.GetHashCode();
+      if (httpStop_ != null) hash ^= HttpStop.GetHashCode();
+      if (httpStartStop_ != null) hash ^= HttpStartStop.GetHashCode();
+      if (logMessage_ != null) hash ^= LogMessage.GetHashCode();
+      if (valueMetric_ != null) hash ^= ValueMetric.GetHashCode();
+      if (counterEvent_ != null) hash ^= CounterEvent.GetHashCode();
+      if (error_ != null) hash ^= Error.GetHashCode();
+      if (containerMetric_ != null) hash ^= ContainerMetric.GetHashCode();
+      return hash;
+    }
+
+    public override string ToString() {
+      return pb::JsonFormatter.Default.Format(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Origin.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Origin);
+      }
+      if (EventType != global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType.NONE_EVENTTYPE) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) EventType);
+      }
+      if (httpStart_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(HttpStart);
+      }
+      if (httpStop_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(HttpStop);
+      }
+      if (Timestamp != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(Timestamp);
+      }
+      if (httpStartStop_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(HttpStartStop);
+      }
+      if (logMessage_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(LogMessage);
+      }
+      if (valueMetric_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ValueMetric);
+      }
+      if (counterEvent_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CounterEvent);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Error);
+      }
+      if (containerMetric_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ContainerMetric);
+      }
+      if (Deployment.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Deployment);
+      }
+      if (Job.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Job);
+      }
+      if (Index.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Index);
+      }
+      if (Ip.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Ip);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (Origin.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Origin);
+      }
+      if (EventType != global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType.NONE_EVENTTYPE) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventType);
+      }
+      if (Timestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timestamp);
+      }
+      if (Deployment.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Deployment);
+      }
+      if (Job.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Job);
+      }
+      if (Index.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Index);
+      }
+      if (Ip.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Ip);
+      }
+      if (httpStart_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HttpStart);
+      }
+      if (httpStop_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HttpStop);
+      }
+      if (httpStartStop_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HttpStartStop);
+      }
+      if (logMessage_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LogMessage);
+      }
+      if (valueMetric_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ValueMetric);
+      }
+      if (counterEvent_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CounterEvent);
+      }
+      if (error_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+      }
+      if (containerMetric_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContainerMetric);
+      }
+      return size;
+    }
+
+    public void MergeFrom(Envelope other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Origin.Length != 0) {
+        Origin = other.Origin;
+      }
+      if (other.EventType != global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType.NONE_EVENTTYPE) {
+        EventType = other.EventType;
+      }
+      if (other.Timestamp != 0L) {
+        Timestamp = other.Timestamp;
+      }
+      if (other.Deployment.Length != 0) {
+        Deployment = other.Deployment;
+      }
+      if (other.Job.Length != 0) {
+        Job = other.Job;
+      }
+      if (other.Index.Length != 0) {
+        Index = other.Index;
+      }
+      if (other.Ip.Length != 0) {
+        Ip = other.Ip;
+      }
+      if (other.httpStart_ != null) {
+        if (httpStart_ == null) {
+          httpStart_ = new global::CloudFoundry.Dropsonde.Events.HttpStart();
+        }
+        HttpStart.MergeFrom(other.HttpStart);
+      }
+      if (other.httpStop_ != null) {
+        if (httpStop_ == null) {
+          httpStop_ = new global::CloudFoundry.Dropsonde.Events.HttpStop();
+        }
+        HttpStop.MergeFrom(other.HttpStop);
+      }
+      if (other.httpStartStop_ != null) {
+        if (httpStartStop_ == null) {
+          httpStartStop_ = new global::CloudFoundry.Dropsonde.Events.HttpStartStop();
+        }
+        HttpStartStop.MergeFrom(other.HttpStartStop);
+      }
+      if (other.logMessage_ != null) {
+        if (logMessage_ == null) {
+          logMessage_ = new global::CloudFoundry.Dropsonde.Events.LogMessage();
+        }
+        LogMessage.MergeFrom(other.LogMessage);
+      }
+      if (other.valueMetric_ != null) {
+        if (valueMetric_ == null) {
+          valueMetric_ = new global::CloudFoundry.Dropsonde.Events.ValueMetric();
+        }
+        ValueMetric.MergeFrom(other.ValueMetric);
+      }
+      if (other.counterEvent_ != null) {
+        if (counterEvent_ == null) {
+          counterEvent_ = new global::CloudFoundry.Dropsonde.Events.CounterEvent();
+        }
+        CounterEvent.MergeFrom(other.CounterEvent);
+      }
+      if (other.error_ != null) {
+        if (error_ == null) {
+          error_ = new global::CloudFoundry.Dropsonde.Events.Error();
+        }
+        Error.MergeFrom(other.Error);
+      }
+      if (other.containerMetric_ != null) {
+        if (containerMetric_ == null) {
+          containerMetric_ = new global::CloudFoundry.Dropsonde.Events.ContainerMetric();
+        }
+        ContainerMetric.MergeFrom(other.ContainerMetric);
+      }
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Origin = input.ReadString();
+            break;
+          }
+          case 16: {
+            eventType_ = (global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (httpStart_ == null) {
+              httpStart_ = new global::CloudFoundry.Dropsonde.Events.HttpStart();
+            }
+            input.ReadMessage(httpStart_);
+            break;
+          }
+          case 42: {
+            if (httpStop_ == null) {
+              httpStop_ = new global::CloudFoundry.Dropsonde.Events.HttpStop();
+            }
+            input.ReadMessage(httpStop_);
+            break;
+          }
+          case 48: {
+            Timestamp = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            if (httpStartStop_ == null) {
+              httpStartStop_ = new global::CloudFoundry.Dropsonde.Events.HttpStartStop();
+            }
+            input.ReadMessage(httpStartStop_);
+            break;
+          }
+          case 66: {
+            if (logMessage_ == null) {
+              logMessage_ = new global::CloudFoundry.Dropsonde.Events.LogMessage();
+            }
+            input.ReadMessage(logMessage_);
+            break;
+          }
+          case 74: {
+            if (valueMetric_ == null) {
+              valueMetric_ = new global::CloudFoundry.Dropsonde.Events.ValueMetric();
+            }
+            input.ReadMessage(valueMetric_);
+            break;
+          }
+          case 82: {
+            if (counterEvent_ == null) {
+              counterEvent_ = new global::CloudFoundry.Dropsonde.Events.CounterEvent();
+            }
+            input.ReadMessage(counterEvent_);
+            break;
+          }
+          case 90: {
+            if (error_ == null) {
+              error_ = new global::CloudFoundry.Dropsonde.Events.Error();
+            }
+            input.ReadMessage(error_);
+            break;
+          }
+          case 98: {
+            if (containerMetric_ == null) {
+              containerMetric_ = new global::CloudFoundry.Dropsonde.Events.ContainerMetric();
+            }
+            input.ReadMessage(containerMetric_);
+            break;
+          }
+          case 106: {
+            Deployment = input.ReadString();
+            break;
+          }
+          case 114: {
+            Job = input.ReadString();
+            break;
+          }
+          case 122: {
+            Index = input.ReadString();
+            break;
+          }
+          case 130: {
+            Ip = input.ReadString();
+            break;
+          }
+        }
+      }
     }
 
     #region Nested types
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
       public enum EventType {
-        Heartbeat = 1,
+        NONE_EVENTTYPE = 0,
         HttpStart = 2,
         HttpStop = 3,
         HttpStartStop = 4,
@@ -123,1165 +583,6 @@ namespace CloudFoundry.Dropsonde.Events {
     }
     #endregion
 
-    public const int OriginFieldNumber = 1;
-    private bool hasOrigin;
-    private string origin_ = "";
-    public bool HasOrigin {
-      get { return hasOrigin; }
-    }
-    public string Origin {
-      get { return origin_; }
-    }
-
-    public const int EventTypeFieldNumber = 2;
-    private bool hasEventType;
-    private global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType eventType_ = global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType.Heartbeat;
-    public bool HasEventType {
-      get { return hasEventType; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType EventType {
-      get { return eventType_; }
-    }
-
-    public const int TimestampFieldNumber = 6;
-    private bool hasTimestamp;
-    private long timestamp_;
-    public bool HasTimestamp {
-      get { return hasTimestamp; }
-    }
-    public long Timestamp {
-      get { return timestamp_; }
-    }
-
-    public const int DeploymentFieldNumber = 13;
-    private bool hasDeployment;
-    private string deployment_ = "";
-    public bool HasDeployment {
-      get { return hasDeployment; }
-    }
-    public string Deployment {
-      get { return deployment_; }
-    }
-
-    public const int JobFieldNumber = 14;
-    private bool hasJob;
-    private string job_ = "";
-    public bool HasJob {
-      get { return hasJob; }
-    }
-    public string Job {
-      get { return job_; }
-    }
-
-    public const int IndexFieldNumber = 15;
-    private bool hasIndex;
-    private string index_ = "";
-    public bool HasIndex {
-      get { return hasIndex; }
-    }
-    public string Index {
-      get { return index_; }
-    }
-
-    public const int IpFieldNumber = 16;
-    private bool hasIp;
-    private string ip_ = "";
-    public bool HasIp {
-      get { return hasIp; }
-    }
-    public string Ip {
-      get { return ip_; }
-    }
-
-    public const int HeartbeatFieldNumber = 3;
-    private bool hasHeartbeat;
-    private global::CloudFoundry.Dropsonde.Events.Heartbeat heartbeat_;
-    public bool HasHeartbeat {
-      get { return hasHeartbeat; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.Heartbeat Heartbeat {
-      get { return heartbeat_ ?? global::CloudFoundry.Dropsonde.Events.Heartbeat.DefaultInstance; }
-    }
-
-    public const int HttpStartFieldNumber = 4;
-    private bool hasHttpStart;
-    private global::CloudFoundry.Dropsonde.Events.HttpStart httpStart_;
-    public bool HasHttpStart {
-      get { return hasHttpStart; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.HttpStart HttpStart {
-      get { return httpStart_ ?? global::CloudFoundry.Dropsonde.Events.HttpStart.DefaultInstance; }
-    }
-
-    public const int HttpStopFieldNumber = 5;
-    private bool hasHttpStop;
-    private global::CloudFoundry.Dropsonde.Events.HttpStop httpStop_;
-    public bool HasHttpStop {
-      get { return hasHttpStop; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.HttpStop HttpStop {
-      get { return httpStop_ ?? global::CloudFoundry.Dropsonde.Events.HttpStop.DefaultInstance; }
-    }
-
-    public const int HttpStartStopFieldNumber = 7;
-    private bool hasHttpStartStop;
-    private global::CloudFoundry.Dropsonde.Events.HttpStartStop httpStartStop_;
-    public bool HasHttpStartStop {
-      get { return hasHttpStartStop; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.HttpStartStop HttpStartStop {
-      get { return httpStartStop_ ?? global::CloudFoundry.Dropsonde.Events.HttpStartStop.DefaultInstance; }
-    }
-
-    public const int LogMessageFieldNumber = 8;
-    private bool hasLogMessage;
-    private global::CloudFoundry.Dropsonde.Events.LogMessage logMessage_;
-    public bool HasLogMessage {
-      get { return hasLogMessage; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.LogMessage LogMessage {
-      get { return logMessage_ ?? global::CloudFoundry.Dropsonde.Events.LogMessage.DefaultInstance; }
-    }
-
-    public const int ValueMetricFieldNumber = 9;
-    private bool hasValueMetric;
-    private global::CloudFoundry.Dropsonde.Events.ValueMetric valueMetric_;
-    public bool HasValueMetric {
-      get { return hasValueMetric; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.ValueMetric ValueMetric {
-      get { return valueMetric_ ?? global::CloudFoundry.Dropsonde.Events.ValueMetric.DefaultInstance; }
-    }
-
-    public const int CounterEventFieldNumber = 10;
-    private bool hasCounterEvent;
-    private global::CloudFoundry.Dropsonde.Events.CounterEvent counterEvent_;
-    public bool HasCounterEvent {
-      get { return hasCounterEvent; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.CounterEvent CounterEvent {
-      get { return counterEvent_ ?? global::CloudFoundry.Dropsonde.Events.CounterEvent.DefaultInstance; }
-    }
-
-    public const int ErrorFieldNumber = 11;
-    private bool hasError;
-    private global::CloudFoundry.Dropsonde.Events.Error error_;
-    public bool HasError {
-      get { return hasError; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.Error Error {
-      get { return error_ ?? global::CloudFoundry.Dropsonde.Events.Error.DefaultInstance; }
-    }
-
-    public const int ContainerMetricFieldNumber = 12;
-    private bool hasContainerMetric;
-    private global::CloudFoundry.Dropsonde.Events.ContainerMetric containerMetric_;
-    public bool HasContainerMetric {
-      get { return hasContainerMetric; }
-    }
-    public global::CloudFoundry.Dropsonde.Events.ContainerMetric ContainerMetric {
-      get { return containerMetric_ ?? global::CloudFoundry.Dropsonde.Events.ContainerMetric.DefaultInstance; }
-    }
-
-    public override bool IsInitialized {
-      get {
-        if (!hasOrigin) return false;
-        if (!hasEventType) return false;
-        if (HasHeartbeat) {
-          if (!Heartbeat.IsInitialized) return false;
-        }
-        if (HasHttpStart) {
-          if (!HttpStart.IsInitialized) return false;
-        }
-        if (HasHttpStop) {
-          if (!HttpStop.IsInitialized) return false;
-        }
-        if (HasHttpStartStop) {
-          if (!HttpStartStop.IsInitialized) return false;
-        }
-        if (HasLogMessage) {
-          if (!LogMessage.IsInitialized) return false;
-        }
-        if (HasValueMetric) {
-          if (!ValueMetric.IsInitialized) return false;
-        }
-        if (HasCounterEvent) {
-          if (!CounterEvent.IsInitialized) return false;
-        }
-        if (HasError) {
-          if (!Error.IsInitialized) return false;
-        }
-        if (HasContainerMetric) {
-          if (!ContainerMetric.IsInitialized) return false;
-        }
-        return true;
-      }
-    }
-
-    public override void WriteTo(pb::ICodedOutputStream output) {
-      CalcSerializedSize();
-      string[] field_names = _envelopeFieldNames;
-      if (hasOrigin) {
-        output.WriteString(1, field_names[13], Origin);
-      }
-      if (hasEventType) {
-        output.WriteEnum(2, field_names[4], (int) EventType, EventType);
-      }
-      if (hasHeartbeat) {
-        output.WriteMessage(3, field_names[5], Heartbeat);
-      }
-      if (hasHttpStart) {
-        output.WriteMessage(4, field_names[6], HttpStart);
-      }
-      if (hasHttpStop) {
-        output.WriteMessage(5, field_names[8], HttpStop);
-      }
-      if (hasTimestamp) {
-        output.WriteInt64(6, field_names[14], Timestamp);
-      }
-      if (hasHttpStartStop) {
-        output.WriteMessage(7, field_names[7], HttpStartStop);
-      }
-      if (hasLogMessage) {
-        output.WriteMessage(8, field_names[12], LogMessage);
-      }
-      if (hasValueMetric) {
-        output.WriteMessage(9, field_names[15], ValueMetric);
-      }
-      if (hasCounterEvent) {
-        output.WriteMessage(10, field_names[1], CounterEvent);
-      }
-      if (hasError) {
-        output.WriteMessage(11, field_names[3], Error);
-      }
-      if (hasContainerMetric) {
-        output.WriteMessage(12, field_names[0], ContainerMetric);
-      }
-      if (hasDeployment) {
-        output.WriteString(13, field_names[2], Deployment);
-      }
-      if (hasJob) {
-        output.WriteString(14, field_names[11], Job);
-      }
-      if (hasIndex) {
-        output.WriteString(15, field_names[9], Index);
-      }
-      if (hasIp) {
-        output.WriteString(16, field_names[10], Ip);
-      }
-      UnknownFields.WriteTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public override int SerializedSize {
-      get {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-        return CalcSerializedSize();
-      }
-    }
-
-    private int CalcSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (hasOrigin) {
-        size += pb::CodedOutputStream.ComputeStringSize(1, Origin);
-      }
-      if (hasEventType) {
-        size += pb::CodedOutputStream.ComputeEnumSize(2, (int) EventType);
-      }
-      if (hasTimestamp) {
-        size += pb::CodedOutputStream.ComputeInt64Size(6, Timestamp);
-      }
-      if (hasDeployment) {
-        size += pb::CodedOutputStream.ComputeStringSize(13, Deployment);
-      }
-      if (hasJob) {
-        size += pb::CodedOutputStream.ComputeStringSize(14, Job);
-      }
-      if (hasIndex) {
-        size += pb::CodedOutputStream.ComputeStringSize(15, Index);
-      }
-      if (hasIp) {
-        size += pb::CodedOutputStream.ComputeStringSize(16, Ip);
-      }
-      if (hasHeartbeat) {
-        size += pb::CodedOutputStream.ComputeMessageSize(3, Heartbeat);
-      }
-      if (hasHttpStart) {
-        size += pb::CodedOutputStream.ComputeMessageSize(4, HttpStart);
-      }
-      if (hasHttpStop) {
-        size += pb::CodedOutputStream.ComputeMessageSize(5, HttpStop);
-      }
-      if (hasHttpStartStop) {
-        size += pb::CodedOutputStream.ComputeMessageSize(7, HttpStartStop);
-      }
-      if (hasLogMessage) {
-        size += pb::CodedOutputStream.ComputeMessageSize(8, LogMessage);
-      }
-      if (hasValueMetric) {
-        size += pb::CodedOutputStream.ComputeMessageSize(9, ValueMetric);
-      }
-      if (hasCounterEvent) {
-        size += pb::CodedOutputStream.ComputeMessageSize(10, CounterEvent);
-      }
-      if (hasError) {
-        size += pb::CodedOutputStream.ComputeMessageSize(11, Error);
-      }
-      if (hasContainerMetric) {
-        size += pb::CodedOutputStream.ComputeMessageSize(12, ContainerMetric);
-      }
-      size += UnknownFields.SerializedSize;
-      memoizedSerializedSize = size;
-      return size;
-    }
-    public static Envelope ParseFrom(pb::ByteString data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static Envelope ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static Envelope ParseFrom(byte[] data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static Envelope ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static Envelope ParseFrom(global::System.IO.Stream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static Envelope ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    public static Envelope ParseDelimitedFrom(global::System.IO.Stream input) {
-      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
-    }
-    public static Envelope ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
-    }
-    public static Envelope ParseFrom(pb::ICodedInputStream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static Envelope ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    private Envelope MakeReadOnly() {
-      return this;
-    }
-
-    public static Builder CreateBuilder() { return new Builder(); }
-    public override Builder ToBuilder() { return CreateBuilder(this); }
-    public override Builder CreateBuilderForType() { return new Builder(); }
-    public static Builder CreateBuilder(Envelope prototype) {
-      return new Builder(prototype);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public sealed partial class Builder : pb::GeneratedBuilder<Envelope, Builder> {
-      protected override Builder ThisBuilder {
-        get { return this; }
-      }
-      public Builder() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-      }
-      internal Builder(Envelope cloneFrom) {
-        result = cloneFrom;
-        resultIsReadOnly = true;
-      }
-
-      private bool resultIsReadOnly;
-      private Envelope result;
-
-      private Envelope PrepareBuilder() {
-        if (resultIsReadOnly) {
-          Envelope original = result;
-          result = new Envelope();
-          resultIsReadOnly = false;
-          MergeFrom(original);
-        }
-        return result;
-      }
-
-      public override bool IsInitialized {
-        get { return result.IsInitialized; }
-      }
-
-      protected override Envelope MessageBeingBuilt {
-        get { return PrepareBuilder(); }
-      }
-
-      public override Builder Clear() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-        return this;
-      }
-
-      public override Builder Clone() {
-        if (resultIsReadOnly) {
-          return new Builder(result);
-        } else {
-          return new Builder().MergeFrom(result);
-        }
-      }
-
-      public override pbd::MessageDescriptor DescriptorForType {
-        get { return global::CloudFoundry.Dropsonde.Events.Envelope.Descriptor; }
-      }
-
-      public override Envelope DefaultInstanceForType {
-        get { return global::CloudFoundry.Dropsonde.Events.Envelope.DefaultInstance; }
-      }
-
-      public override Envelope BuildPartial() {
-        if (resultIsReadOnly) {
-          return result;
-        }
-        resultIsReadOnly = true;
-        return result.MakeReadOnly();
-      }
-
-      public override Builder MergeFrom(pb::IMessage other) {
-        if (other is Envelope) {
-          return MergeFrom((Envelope) other);
-        } else {
-          base.MergeFrom(other);
-          return this;
-        }
-      }
-
-      public override Builder MergeFrom(Envelope other) {
-        if (other == global::CloudFoundry.Dropsonde.Events.Envelope.DefaultInstance) return this;
-        PrepareBuilder();
-        if (other.HasOrigin) {
-          Origin = other.Origin;
-        }
-        if (other.HasEventType) {
-          EventType = other.EventType;
-        }
-        if (other.HasTimestamp) {
-          Timestamp = other.Timestamp;
-        }
-        if (other.HasDeployment) {
-          Deployment = other.Deployment;
-        }
-        if (other.HasJob) {
-          Job = other.Job;
-        }
-        if (other.HasIndex) {
-          Index = other.Index;
-        }
-        if (other.HasIp) {
-          Ip = other.Ip;
-        }
-        if (other.HasHeartbeat) {
-          MergeHeartbeat(other.Heartbeat);
-        }
-        if (other.HasHttpStart) {
-          MergeHttpStart(other.HttpStart);
-        }
-        if (other.HasHttpStop) {
-          MergeHttpStop(other.HttpStop);
-        }
-        if (other.HasHttpStartStop) {
-          MergeHttpStartStop(other.HttpStartStop);
-        }
-        if (other.HasLogMessage) {
-          MergeLogMessage(other.LogMessage);
-        }
-        if (other.HasValueMetric) {
-          MergeValueMetric(other.ValueMetric);
-        }
-        if (other.HasCounterEvent) {
-          MergeCounterEvent(other.CounterEvent);
-        }
-        if (other.HasError) {
-          MergeError(other.Error);
-        }
-        if (other.HasContainerMetric) {
-          MergeContainerMetric(other.ContainerMetric);
-        }
-        this.MergeUnknownFields(other.UnknownFields);
-        return this;
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input) {
-        return MergeFrom(input, pb::ExtensionRegistry.Empty);
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-        PrepareBuilder();
-        pb::UnknownFieldSet.Builder unknownFields = null;
-        uint tag;
-        string field_name;
-        while (input.ReadTag(out tag, out field_name)) {
-          if(tag == 0 && field_name != null) {
-            int field_ordinal = global::System.Array.BinarySearch(_envelopeFieldNames, field_name, global::System.StringComparer.Ordinal);
-            if(field_ordinal >= 0)
-              tag = _envelopeFieldTags[field_ordinal];
-            else {
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              continue;
-            }
-          }
-          switch (tag) {
-            case 0: {
-              throw pb::InvalidProtocolBufferException.InvalidTag();
-            }
-            default: {
-              if (pb::WireFormat.IsEndGroupTag(tag)) {
-                if (unknownFields != null) {
-                  this.UnknownFields = unknownFields.Build();
-                }
-                return this;
-              }
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              break;
-            }
-            case 10: {
-              result.hasOrigin = input.ReadString(ref result.origin_);
-              break;
-            }
-            case 16: {
-              object unknown;
-              if(input.ReadEnum(ref result.eventType_, out unknown)) {
-                result.hasEventType = true;
-              } else if(unknown is int) {
-                if (unknownFields == null) {
-                  unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-                }
-                unknownFields.MergeVarintField(2, (ulong)(int)unknown);
-              }
-              break;
-            }
-            case 26: {
-              global::CloudFoundry.Dropsonde.Events.Heartbeat.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.Heartbeat.CreateBuilder();
-              if (result.hasHeartbeat) {
-                subBuilder.MergeFrom(Heartbeat);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              Heartbeat = subBuilder.BuildPartial();
-              break;
-            }
-            case 34: {
-              global::CloudFoundry.Dropsonde.Events.HttpStart.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.HttpStart.CreateBuilder();
-              if (result.hasHttpStart) {
-                subBuilder.MergeFrom(HttpStart);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              HttpStart = subBuilder.BuildPartial();
-              break;
-            }
-            case 42: {
-              global::CloudFoundry.Dropsonde.Events.HttpStop.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.HttpStop.CreateBuilder();
-              if (result.hasHttpStop) {
-                subBuilder.MergeFrom(HttpStop);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              HttpStop = subBuilder.BuildPartial();
-              break;
-            }
-            case 48: {
-              result.hasTimestamp = input.ReadInt64(ref result.timestamp_);
-              break;
-            }
-            case 58: {
-              global::CloudFoundry.Dropsonde.Events.HttpStartStop.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.HttpStartStop.CreateBuilder();
-              if (result.hasHttpStartStop) {
-                subBuilder.MergeFrom(HttpStartStop);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              HttpStartStop = subBuilder.BuildPartial();
-              break;
-            }
-            case 66: {
-              global::CloudFoundry.Dropsonde.Events.LogMessage.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.LogMessage.CreateBuilder();
-              if (result.hasLogMessage) {
-                subBuilder.MergeFrom(LogMessage);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              LogMessage = subBuilder.BuildPartial();
-              break;
-            }
-            case 74: {
-              global::CloudFoundry.Dropsonde.Events.ValueMetric.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.ValueMetric.CreateBuilder();
-              if (result.hasValueMetric) {
-                subBuilder.MergeFrom(ValueMetric);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              ValueMetric = subBuilder.BuildPartial();
-              break;
-            }
-            case 82: {
-              global::CloudFoundry.Dropsonde.Events.CounterEvent.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.CounterEvent.CreateBuilder();
-              if (result.hasCounterEvent) {
-                subBuilder.MergeFrom(CounterEvent);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              CounterEvent = subBuilder.BuildPartial();
-              break;
-            }
-            case 90: {
-              global::CloudFoundry.Dropsonde.Events.Error.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.Error.CreateBuilder();
-              if (result.hasError) {
-                subBuilder.MergeFrom(Error);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              Error = subBuilder.BuildPartial();
-              break;
-            }
-            case 98: {
-              global::CloudFoundry.Dropsonde.Events.ContainerMetric.Builder subBuilder = global::CloudFoundry.Dropsonde.Events.ContainerMetric.CreateBuilder();
-              if (result.hasContainerMetric) {
-                subBuilder.MergeFrom(ContainerMetric);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              ContainerMetric = subBuilder.BuildPartial();
-              break;
-            }
-            case 106: {
-              result.hasDeployment = input.ReadString(ref result.deployment_);
-              break;
-            }
-            case 114: {
-              result.hasJob = input.ReadString(ref result.job_);
-              break;
-            }
-            case 122: {
-              result.hasIndex = input.ReadString(ref result.index_);
-              break;
-            }
-            case 130: {
-              result.hasIp = input.ReadString(ref result.ip_);
-              break;
-            }
-          }
-        }
-
-        if (unknownFields != null) {
-          this.UnknownFields = unknownFields.Build();
-        }
-        return this;
-      }
-
-
-      public bool HasOrigin {
-        get { return result.hasOrigin; }
-      }
-      public string Origin {
-        get { return result.Origin; }
-        set { SetOrigin(value); }
-      }
-      public Builder SetOrigin(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasOrigin = true;
-        result.origin_ = value;
-        return this;
-      }
-      public Builder ClearOrigin() {
-        PrepareBuilder();
-        result.hasOrigin = false;
-        result.origin_ = "";
-        return this;
-      }
-
-      public bool HasEventType {
-        get { return result.hasEventType; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType EventType {
-        get { return result.EventType; }
-        set { SetEventType(value); }
-      }
-      public Builder SetEventType(global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType value) {
-        PrepareBuilder();
-        result.hasEventType = true;
-        result.eventType_ = value;
-        return this;
-      }
-      public Builder ClearEventType() {
-        PrepareBuilder();
-        result.hasEventType = false;
-        result.eventType_ = global::CloudFoundry.Dropsonde.Events.Envelope.Types.EventType.Heartbeat;
-        return this;
-      }
-
-      public bool HasTimestamp {
-        get { return result.hasTimestamp; }
-      }
-      public long Timestamp {
-        get { return result.Timestamp; }
-        set { SetTimestamp(value); }
-      }
-      public Builder SetTimestamp(long value) {
-        PrepareBuilder();
-        result.hasTimestamp = true;
-        result.timestamp_ = value;
-        return this;
-      }
-      public Builder ClearTimestamp() {
-        PrepareBuilder();
-        result.hasTimestamp = false;
-        result.timestamp_ = 0L;
-        return this;
-      }
-
-      public bool HasDeployment {
-        get { return result.hasDeployment; }
-      }
-      public string Deployment {
-        get { return result.Deployment; }
-        set { SetDeployment(value); }
-      }
-      public Builder SetDeployment(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasDeployment = true;
-        result.deployment_ = value;
-        return this;
-      }
-      public Builder ClearDeployment() {
-        PrepareBuilder();
-        result.hasDeployment = false;
-        result.deployment_ = "";
-        return this;
-      }
-
-      public bool HasJob {
-        get { return result.hasJob; }
-      }
-      public string Job {
-        get { return result.Job; }
-        set { SetJob(value); }
-      }
-      public Builder SetJob(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasJob = true;
-        result.job_ = value;
-        return this;
-      }
-      public Builder ClearJob() {
-        PrepareBuilder();
-        result.hasJob = false;
-        result.job_ = "";
-        return this;
-      }
-
-      public bool HasIndex {
-        get { return result.hasIndex; }
-      }
-      public string Index {
-        get { return result.Index; }
-        set { SetIndex(value); }
-      }
-      public Builder SetIndex(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasIndex = true;
-        result.index_ = value;
-        return this;
-      }
-      public Builder ClearIndex() {
-        PrepareBuilder();
-        result.hasIndex = false;
-        result.index_ = "";
-        return this;
-      }
-
-      public bool HasIp {
-        get { return result.hasIp; }
-      }
-      public string Ip {
-        get { return result.Ip; }
-        set { SetIp(value); }
-      }
-      public Builder SetIp(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasIp = true;
-        result.ip_ = value;
-        return this;
-      }
-      public Builder ClearIp() {
-        PrepareBuilder();
-        result.hasIp = false;
-        result.ip_ = "";
-        return this;
-      }
-
-      public bool HasHeartbeat {
-       get { return result.hasHeartbeat; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.Heartbeat Heartbeat {
-        get { return result.Heartbeat; }
-        set { SetHeartbeat(value); }
-      }
-      public Builder SetHeartbeat(global::CloudFoundry.Dropsonde.Events.Heartbeat value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasHeartbeat = true;
-        result.heartbeat_ = value;
-        return this;
-      }
-      public Builder SetHeartbeat(global::CloudFoundry.Dropsonde.Events.Heartbeat.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasHeartbeat = true;
-        result.heartbeat_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeHeartbeat(global::CloudFoundry.Dropsonde.Events.Heartbeat value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasHeartbeat &&
-            result.heartbeat_ != global::CloudFoundry.Dropsonde.Events.Heartbeat.DefaultInstance) {
-            result.heartbeat_ = global::CloudFoundry.Dropsonde.Events.Heartbeat.CreateBuilder(result.heartbeat_).MergeFrom(value).BuildPartial();
-        } else {
-          result.heartbeat_ = value;
-        }
-        result.hasHeartbeat = true;
-        return this;
-      }
-      public Builder ClearHeartbeat() {
-        PrepareBuilder();
-        result.hasHeartbeat = false;
-        result.heartbeat_ = null;
-        return this;
-      }
-
-      public bool HasHttpStart {
-       get { return result.hasHttpStart; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.HttpStart HttpStart {
-        get { return result.HttpStart; }
-        set { SetHttpStart(value); }
-      }
-      public Builder SetHttpStart(global::CloudFoundry.Dropsonde.Events.HttpStart value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasHttpStart = true;
-        result.httpStart_ = value;
-        return this;
-      }
-      public Builder SetHttpStart(global::CloudFoundry.Dropsonde.Events.HttpStart.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasHttpStart = true;
-        result.httpStart_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeHttpStart(global::CloudFoundry.Dropsonde.Events.HttpStart value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasHttpStart &&
-            result.httpStart_ != global::CloudFoundry.Dropsonde.Events.HttpStart.DefaultInstance) {
-            result.httpStart_ = global::CloudFoundry.Dropsonde.Events.HttpStart.CreateBuilder(result.httpStart_).MergeFrom(value).BuildPartial();
-        } else {
-          result.httpStart_ = value;
-        }
-        result.hasHttpStart = true;
-        return this;
-      }
-      public Builder ClearHttpStart() {
-        PrepareBuilder();
-        result.hasHttpStart = false;
-        result.httpStart_ = null;
-        return this;
-      }
-
-      public bool HasHttpStop {
-       get { return result.hasHttpStop; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.HttpStop HttpStop {
-        get { return result.HttpStop; }
-        set { SetHttpStop(value); }
-      }
-      public Builder SetHttpStop(global::CloudFoundry.Dropsonde.Events.HttpStop value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasHttpStop = true;
-        result.httpStop_ = value;
-        return this;
-      }
-      public Builder SetHttpStop(global::CloudFoundry.Dropsonde.Events.HttpStop.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasHttpStop = true;
-        result.httpStop_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeHttpStop(global::CloudFoundry.Dropsonde.Events.HttpStop value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasHttpStop &&
-            result.httpStop_ != global::CloudFoundry.Dropsonde.Events.HttpStop.DefaultInstance) {
-            result.httpStop_ = global::CloudFoundry.Dropsonde.Events.HttpStop.CreateBuilder(result.httpStop_).MergeFrom(value).BuildPartial();
-        } else {
-          result.httpStop_ = value;
-        }
-        result.hasHttpStop = true;
-        return this;
-      }
-      public Builder ClearHttpStop() {
-        PrepareBuilder();
-        result.hasHttpStop = false;
-        result.httpStop_ = null;
-        return this;
-      }
-
-      public bool HasHttpStartStop {
-       get { return result.hasHttpStartStop; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.HttpStartStop HttpStartStop {
-        get { return result.HttpStartStop; }
-        set { SetHttpStartStop(value); }
-      }
-      public Builder SetHttpStartStop(global::CloudFoundry.Dropsonde.Events.HttpStartStop value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasHttpStartStop = true;
-        result.httpStartStop_ = value;
-        return this;
-      }
-      public Builder SetHttpStartStop(global::CloudFoundry.Dropsonde.Events.HttpStartStop.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasHttpStartStop = true;
-        result.httpStartStop_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeHttpStartStop(global::CloudFoundry.Dropsonde.Events.HttpStartStop value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasHttpStartStop &&
-            result.httpStartStop_ != global::CloudFoundry.Dropsonde.Events.HttpStartStop.DefaultInstance) {
-            result.httpStartStop_ = global::CloudFoundry.Dropsonde.Events.HttpStartStop.CreateBuilder(result.httpStartStop_).MergeFrom(value).BuildPartial();
-        } else {
-          result.httpStartStop_ = value;
-        }
-        result.hasHttpStartStop = true;
-        return this;
-      }
-      public Builder ClearHttpStartStop() {
-        PrepareBuilder();
-        result.hasHttpStartStop = false;
-        result.httpStartStop_ = null;
-        return this;
-      }
-
-      public bool HasLogMessage {
-       get { return result.hasLogMessage; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.LogMessage LogMessage {
-        get { return result.LogMessage; }
-        set { SetLogMessage(value); }
-      }
-      public Builder SetLogMessage(global::CloudFoundry.Dropsonde.Events.LogMessage value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasLogMessage = true;
-        result.logMessage_ = value;
-        return this;
-      }
-      public Builder SetLogMessage(global::CloudFoundry.Dropsonde.Events.LogMessage.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasLogMessage = true;
-        result.logMessage_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeLogMessage(global::CloudFoundry.Dropsonde.Events.LogMessage value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasLogMessage &&
-            result.logMessage_ != global::CloudFoundry.Dropsonde.Events.LogMessage.DefaultInstance) {
-            result.logMessage_ = global::CloudFoundry.Dropsonde.Events.LogMessage.CreateBuilder(result.logMessage_).MergeFrom(value).BuildPartial();
-        } else {
-          result.logMessage_ = value;
-        }
-        result.hasLogMessage = true;
-        return this;
-      }
-      public Builder ClearLogMessage() {
-        PrepareBuilder();
-        result.hasLogMessage = false;
-        result.logMessage_ = null;
-        return this;
-      }
-
-      public bool HasValueMetric {
-       get { return result.hasValueMetric; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.ValueMetric ValueMetric {
-        get { return result.ValueMetric; }
-        set { SetValueMetric(value); }
-      }
-      public Builder SetValueMetric(global::CloudFoundry.Dropsonde.Events.ValueMetric value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasValueMetric = true;
-        result.valueMetric_ = value;
-        return this;
-      }
-      public Builder SetValueMetric(global::CloudFoundry.Dropsonde.Events.ValueMetric.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasValueMetric = true;
-        result.valueMetric_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeValueMetric(global::CloudFoundry.Dropsonde.Events.ValueMetric value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasValueMetric &&
-            result.valueMetric_ != global::CloudFoundry.Dropsonde.Events.ValueMetric.DefaultInstance) {
-            result.valueMetric_ = global::CloudFoundry.Dropsonde.Events.ValueMetric.CreateBuilder(result.valueMetric_).MergeFrom(value).BuildPartial();
-        } else {
-          result.valueMetric_ = value;
-        }
-        result.hasValueMetric = true;
-        return this;
-      }
-      public Builder ClearValueMetric() {
-        PrepareBuilder();
-        result.hasValueMetric = false;
-        result.valueMetric_ = null;
-        return this;
-      }
-
-      public bool HasCounterEvent {
-       get { return result.hasCounterEvent; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.CounterEvent CounterEvent {
-        get { return result.CounterEvent; }
-        set { SetCounterEvent(value); }
-      }
-      public Builder SetCounterEvent(global::CloudFoundry.Dropsonde.Events.CounterEvent value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasCounterEvent = true;
-        result.counterEvent_ = value;
-        return this;
-      }
-      public Builder SetCounterEvent(global::CloudFoundry.Dropsonde.Events.CounterEvent.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasCounterEvent = true;
-        result.counterEvent_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeCounterEvent(global::CloudFoundry.Dropsonde.Events.CounterEvent value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasCounterEvent &&
-            result.counterEvent_ != global::CloudFoundry.Dropsonde.Events.CounterEvent.DefaultInstance) {
-            result.counterEvent_ = global::CloudFoundry.Dropsonde.Events.CounterEvent.CreateBuilder(result.counterEvent_).MergeFrom(value).BuildPartial();
-        } else {
-          result.counterEvent_ = value;
-        }
-        result.hasCounterEvent = true;
-        return this;
-      }
-      public Builder ClearCounterEvent() {
-        PrepareBuilder();
-        result.hasCounterEvent = false;
-        result.counterEvent_ = null;
-        return this;
-      }
-
-      public bool HasError {
-       get { return result.hasError; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.Error Error {
-        get { return result.Error; }
-        set { SetError(value); }
-      }
-      public Builder SetError(global::CloudFoundry.Dropsonde.Events.Error value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasError = true;
-        result.error_ = value;
-        return this;
-      }
-      public Builder SetError(global::CloudFoundry.Dropsonde.Events.Error.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasError = true;
-        result.error_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeError(global::CloudFoundry.Dropsonde.Events.Error value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasError &&
-            result.error_ != global::CloudFoundry.Dropsonde.Events.Error.DefaultInstance) {
-            result.error_ = global::CloudFoundry.Dropsonde.Events.Error.CreateBuilder(result.error_).MergeFrom(value).BuildPartial();
-        } else {
-          result.error_ = value;
-        }
-        result.hasError = true;
-        return this;
-      }
-      public Builder ClearError() {
-        PrepareBuilder();
-        result.hasError = false;
-        result.error_ = null;
-        return this;
-      }
-
-      public bool HasContainerMetric {
-       get { return result.hasContainerMetric; }
-      }
-      public global::CloudFoundry.Dropsonde.Events.ContainerMetric ContainerMetric {
-        get { return result.ContainerMetric; }
-        set { SetContainerMetric(value); }
-      }
-      public Builder SetContainerMetric(global::CloudFoundry.Dropsonde.Events.ContainerMetric value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasContainerMetric = true;
-        result.containerMetric_ = value;
-        return this;
-      }
-      public Builder SetContainerMetric(global::CloudFoundry.Dropsonde.Events.ContainerMetric.Builder builderForValue) {
-        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
-        PrepareBuilder();
-        result.hasContainerMetric = true;
-        result.containerMetric_ = builderForValue.Build();
-        return this;
-      }
-      public Builder MergeContainerMetric(global::CloudFoundry.Dropsonde.Events.ContainerMetric value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        if (result.hasContainerMetric &&
-            result.containerMetric_ != global::CloudFoundry.Dropsonde.Events.ContainerMetric.DefaultInstance) {
-            result.containerMetric_ = global::CloudFoundry.Dropsonde.Events.ContainerMetric.CreateBuilder(result.containerMetric_).MergeFrom(value).BuildPartial();
-        } else {
-          result.containerMetric_ = value;
-        }
-        result.hasContainerMetric = true;
-        return this;
-      }
-      public Builder ClearContainerMetric() {
-        PrepareBuilder();
-        result.hasContainerMetric = false;
-        result.containerMetric_ = null;
-        return this;
-      }
-    }
-    static Envelope() {
-      object.ReferenceEquals(global::CloudFoundry.Dropsonde.Events.Proto.Envelope.Descriptor, null);
-    }
   }
 
   #endregion

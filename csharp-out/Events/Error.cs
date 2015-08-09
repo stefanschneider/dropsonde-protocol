@@ -3,9 +3,9 @@
 #pragma warning disable 1591, 0612, 3021
 #region Designer generated code
 
-using pb = global::Google.ProtocolBuffers;
-using pbc = global::Google.ProtocolBuffers.Collections;
-using pbd = global::Google.ProtocolBuffers.Descriptors;
+using pb = global::Google.Protobuf;
+using pbc = global::Google.Protobuf.Collections;
+using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace CloudFoundry.Dropsonde.Events {
 
@@ -14,40 +14,24 @@ namespace CloudFoundry.Dropsonde.Events {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Error {
 
-      #region Extension registration
-      public static void RegisterAllExtensions(pb::ExtensionRegistry registry) {
-      }
-      #endregion
-      #region Static variables
-      internal static pbd::MessageDescriptor internal__static_events_Error__Descriptor;
-      internal static pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.Error, global::CloudFoundry.Dropsonde.Events.Error.Builder> internal__static_events_Error__FieldAccessorTable;
-      #endregion
       #region Descriptor
-      public static pbd::FileDescriptor Descriptor {
+      public static pbr::FileDescriptor Descriptor {
         get { return descriptor; }
       }
-      private static pbd::FileDescriptor descriptor;
+      private static pbr::FileDescriptor descriptor;
 
       static Error() {
         byte[] descriptorData = global::System.Convert.FromBase64String(
             string.Concat(
-              "CgtlcnJvci5wcm90bxIGZXZlbnRzIjYKBUVycm9yEg4KBnNvdXJjZRgBIAIo", 
-              "CRIMCgRjb2RlGAIgAigFEg8KB21lc3NhZ2UYAyACKAlCUQohb3JnLmNsb3Vk", 
+              "CgtlcnJvci5wcm90bxIGZXZlbnRzIjYKBUVycm9yEg4KBnNvdXJjZRgBIAEo", 
+              "CRIMCgRjb2RlGAIgASgFEg8KB21lc3NhZ2UYAyABKAlCUQohb3JnLmNsb3Vk", 
               "Zm91bmRyeS5kcm9wc29uZGUuZXZlbnRzQgxFcnJvckZhY3RvcnmqAh1DbG91", 
-            "ZEZvdW5kcnkuRHJvcHNvbmRlLkV2ZW50cw=="));
-        pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
-          descriptor = root;
-          internal__static_events_Error__Descriptor = Descriptor.MessageTypes[0];
-          internal__static_events_Error__FieldAccessorTable = 
-              new pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.Error, global::CloudFoundry.Dropsonde.Events.Error.Builder>(internal__static_events_Error__Descriptor,
-                  new string[] { "Source", "Code", "Message", });
-          pb::ExtensionRegistry registry = pb::ExtensionRegistry.CreateInstance();
-          RegisterAllExtensions(registry);
-          return registry;
-        };
-        pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-            new pbd::FileDescriptor[] {
-            }, assigner);
+              "ZEZvdW5kcnkuRHJvcHNvbmRlLkV2ZW50c2IGcHJvdG8z"));
+        descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
+            new pbr::FileDescriptor[] { },
+            new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
+              new pbr::GeneratedCodeInfo(typeof(global::CloudFoundry.Dropsonde.Events.Error), new[]{ "Source", "Code", "Message" }, null, null, null)
+            }));
       }
       #endregion
 
@@ -55,369 +39,157 @@ namespace CloudFoundry.Dropsonde.Events {
   }
   #region Messages
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class Error : pb::GeneratedMessage<Error, Error.Builder> {
-    private Error() { }
-    private static readonly Error defaultInstance = new Error().MakeReadOnly();
-    private static readonly string[] _errorFieldNames = new string[] { "code", "message", "source" };
-    private static readonly uint[] _errorFieldTags = new uint[] { 16, 26, 10 };
-    public static Error DefaultInstance {
-      get { return defaultInstance; }
+  public sealed partial class Error : pb::IMessage<Error> {
+    private static readonly pb::MessageParser<Error> _parser = new pb::MessageParser<Error>(() => new Error());
+    public static pb::MessageParser<Error> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CloudFoundry.Dropsonde.Events.Proto.Error.Descriptor.MessageTypes[0]; }
     }
 
-    public override Error DefaultInstanceForType {
-      get { return DefaultInstance; }
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
     }
 
-    protected override Error ThisMessage {
-      get { return this; }
+    public Error() {
+      OnConstruction();
     }
 
-    public static pbd::MessageDescriptor Descriptor {
-      get { return global::CloudFoundry.Dropsonde.Events.Proto.Error.internal__static_events_Error__Descriptor; }
+    partial void OnConstruction();
+
+    public Error(Error other) : this() {
+      source_ = other.source_;
+      code_ = other.code_;
+      message_ = other.message_;
     }
 
-    protected override pb::FieldAccess.FieldAccessorTable<Error, Error.Builder> InternalFieldAccessors {
-      get { return global::CloudFoundry.Dropsonde.Events.Proto.Error.internal__static_events_Error__FieldAccessorTable; }
+    public Error Clone() {
+      return new Error(this);
     }
 
     public const int SourceFieldNumber = 1;
-    private bool hasSource;
     private string source_ = "";
-    public bool HasSource {
-      get { return hasSource; }
-    }
     public string Source {
       get { return source_; }
+      set {
+        source_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
     }
 
     public const int CodeFieldNumber = 2;
-    private bool hasCode;
     private int code_;
-    public bool HasCode {
-      get { return hasCode; }
-    }
     public int Code {
       get { return code_; }
+      set {
+        code_ = value;
+      }
     }
 
     public const int MessageFieldNumber = 3;
-    private bool hasMessage;
     private string message_ = "";
-    public bool HasMessage {
-      get { return hasMessage; }
-    }
     public string Message {
       get { return message_; }
+      set {
+        message_ = pb::Preconditions.CheckNotNull(value, "value");
+      }
     }
 
-    public override bool IsInitialized {
-      get {
-        if (!hasSource) return false;
-        if (!hasCode) return false;
-        if (!hasMessage) return false;
+    public override bool Equals(object other) {
+      return Equals(other as Error);
+    }
+
+    public bool Equals(Error other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Source != other.Source) return false;
+      if (Code != other.Code) return false;
+      if (Message != other.Message) return false;
+      return true;
     }
 
-    public override void WriteTo(pb::ICodedOutputStream output) {
-      CalcSerializedSize();
-      string[] field_names = _errorFieldNames;
-      if (hasSource) {
-        output.WriteString(1, field_names[2], Source);
-      }
-      if (hasCode) {
-        output.WriteInt32(2, field_names[0], Code);
-      }
-      if (hasMessage) {
-        output.WriteString(3, field_names[1], Message);
-      }
-      UnknownFields.WriteTo(output);
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Source.Length != 0) hash ^= Source.GetHashCode();
+      if (Code != 0) hash ^= Code.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      return hash;
     }
 
-    private int memoizedSerializedSize = -1;
-    public override int SerializedSize {
-      get {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-        return CalcSerializedSize();
+    public override string ToString() {
+      return pb::JsonFormatter.Default.Format(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Source.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Source);
+      }
+      if (Code != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Code);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Message);
       }
     }
 
-    private int CalcSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (hasSource) {
-        size += pb::CodedOutputStream.ComputeStringSize(1, Source);
+    public int CalculateSize() {
+      int size = 0;
+      if (Source.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
       }
-      if (hasCode) {
-        size += pb::CodedOutputStream.ComputeInt32Size(2, Code);
+      if (Code != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
       }
-      if (hasMessage) {
-        size += pb::CodedOutputStream.ComputeStringSize(3, Message);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
-      size += UnknownFields.SerializedSize;
-      memoizedSerializedSize = size;
       return size;
     }
-    public static Error ParseFrom(pb::ByteString data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static Error ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static Error ParseFrom(byte[] data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static Error ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static Error ParseFrom(global::System.IO.Stream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static Error ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    public static Error ParseDelimitedFrom(global::System.IO.Stream input) {
-      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
-    }
-    public static Error ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
-    }
-    public static Error ParseFrom(pb::ICodedInputStream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static Error ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    private Error MakeReadOnly() {
-      return this;
+
+    public void MergeFrom(Error other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Source.Length != 0) {
+        Source = other.Source;
+      }
+      if (other.Code != 0) {
+        Code = other.Code;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
     }
 
-    public static Builder CreateBuilder() { return new Builder(); }
-    public override Builder ToBuilder() { return CreateBuilder(this); }
-    public override Builder CreateBuilderForType() { return new Builder(); }
-    public static Builder CreateBuilder(Error prototype) {
-      return new Builder(prototype);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public sealed partial class Builder : pb::GeneratedBuilder<Error, Builder> {
-      protected override Builder ThisBuilder {
-        get { return this; }
-      }
-      public Builder() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-      }
-      internal Builder(Error cloneFrom) {
-        result = cloneFrom;
-        resultIsReadOnly = true;
-      }
-
-      private bool resultIsReadOnly;
-      private Error result;
-
-      private Error PrepareBuilder() {
-        if (resultIsReadOnly) {
-          Error original = result;
-          result = new Error();
-          resultIsReadOnly = false;
-          MergeFrom(original);
-        }
-        return result;
-      }
-
-      public override bool IsInitialized {
-        get { return result.IsInitialized; }
-      }
-
-      protected override Error MessageBeingBuilt {
-        get { return PrepareBuilder(); }
-      }
-
-      public override Builder Clear() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-        return this;
-      }
-
-      public override Builder Clone() {
-        if (resultIsReadOnly) {
-          return new Builder(result);
-        } else {
-          return new Builder().MergeFrom(result);
-        }
-      }
-
-      public override pbd::MessageDescriptor DescriptorForType {
-        get { return global::CloudFoundry.Dropsonde.Events.Error.Descriptor; }
-      }
-
-      public override Error DefaultInstanceForType {
-        get { return global::CloudFoundry.Dropsonde.Events.Error.DefaultInstance; }
-      }
-
-      public override Error BuildPartial() {
-        if (resultIsReadOnly) {
-          return result;
-        }
-        resultIsReadOnly = true;
-        return result.MakeReadOnly();
-      }
-
-      public override Builder MergeFrom(pb::IMessage other) {
-        if (other is Error) {
-          return MergeFrom((Error) other);
-        } else {
-          base.MergeFrom(other);
-          return this;
-        }
-      }
-
-      public override Builder MergeFrom(Error other) {
-        if (other == global::CloudFoundry.Dropsonde.Events.Error.DefaultInstance) return this;
-        PrepareBuilder();
-        if (other.HasSource) {
-          Source = other.Source;
-        }
-        if (other.HasCode) {
-          Code = other.Code;
-        }
-        if (other.HasMessage) {
-          Message = other.Message;
-        }
-        this.MergeUnknownFields(other.UnknownFields);
-        return this;
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input) {
-        return MergeFrom(input, pb::ExtensionRegistry.Empty);
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-        PrepareBuilder();
-        pb::UnknownFieldSet.Builder unknownFields = null;
-        uint tag;
-        string field_name;
-        while (input.ReadTag(out tag, out field_name)) {
-          if(tag == 0 && field_name != null) {
-            int field_ordinal = global::System.Array.BinarySearch(_errorFieldNames, field_name, global::System.StringComparer.Ordinal);
-            if(field_ordinal >= 0)
-              tag = _errorFieldTags[field_ordinal];
-            else {
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              continue;
-            }
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Source = input.ReadString();
+            break;
           }
-          switch (tag) {
-            case 0: {
-              throw pb::InvalidProtocolBufferException.InvalidTag();
-            }
-            default: {
-              if (pb::WireFormat.IsEndGroupTag(tag)) {
-                if (unknownFields != null) {
-                  this.UnknownFields = unknownFields.Build();
-                }
-                return this;
-              }
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              break;
-            }
-            case 10: {
-              result.hasSource = input.ReadString(ref result.source_);
-              break;
-            }
-            case 16: {
-              result.hasCode = input.ReadInt32(ref result.code_);
-              break;
-            }
-            case 26: {
-              result.hasMessage = input.ReadString(ref result.message_);
-              break;
-            }
+          case 16: {
+            Code = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            Message = input.ReadString();
+            break;
           }
         }
-
-        if (unknownFields != null) {
-          this.UnknownFields = unknownFields.Build();
-        }
-        return this;
-      }
-
-
-      public bool HasSource {
-        get { return result.hasSource; }
-      }
-      public string Source {
-        get { return result.Source; }
-        set { SetSource(value); }
-      }
-      public Builder SetSource(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasSource = true;
-        result.source_ = value;
-        return this;
-      }
-      public Builder ClearSource() {
-        PrepareBuilder();
-        result.hasSource = false;
-        result.source_ = "";
-        return this;
-      }
-
-      public bool HasCode {
-        get { return result.hasCode; }
-      }
-      public int Code {
-        get { return result.Code; }
-        set { SetCode(value); }
-      }
-      public Builder SetCode(int value) {
-        PrepareBuilder();
-        result.hasCode = true;
-        result.code_ = value;
-        return this;
-      }
-      public Builder ClearCode() {
-        PrepareBuilder();
-        result.hasCode = false;
-        result.code_ = 0;
-        return this;
-      }
-
-      public bool HasMessage {
-        get { return result.hasMessage; }
-      }
-      public string Message {
-        get { return result.Message; }
-        set { SetMessage(value); }
-      }
-      public Builder SetMessage(string value) {
-        pb::ThrowHelper.ThrowIfNull(value, "value");
-        PrepareBuilder();
-        result.hasMessage = true;
-        result.message_ = value;
-        return this;
-      }
-      public Builder ClearMessage() {
-        PrepareBuilder();
-        result.hasMessage = false;
-        result.message_ = "";
-        return this;
       }
     }
-    static Error() {
-      object.ReferenceEquals(global::CloudFoundry.Dropsonde.Events.Proto.Error.Descriptor, null);
-    }
+
   }
 
   #endregion

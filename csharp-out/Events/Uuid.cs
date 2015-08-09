@@ -3,372 +3,164 @@
 #pragma warning disable 1591, 0612, 3021
 #region Designer generated code
 
-using pb = global::Google.ProtocolBuffers;
-using pbc = global::Google.ProtocolBuffers.Collections;
-using pbd = global::Google.ProtocolBuffers.Descriptors;
+using pb = global::Google.Protobuf;
+using pbc = global::Google.Protobuf.Collections;
+using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace CloudFoundry.Dropsonde.Events {
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class Uuid {
 
-    #region Extension registration
-    public static void RegisterAllExtensions(pb::ExtensionRegistry registry) {
-    }
-    #endregion
-    #region Static variables
-    internal static pbd::MessageDescriptor internal__static_events_UUID__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.UUID, global::CloudFoundry.Dropsonde.Events.UUID.Builder> internal__static_events_UUID__FieldAccessorTable;
-    #endregion
     #region Descriptor
-    public static pbd::FileDescriptor Descriptor {
+    public static pbr::FileDescriptor Descriptor {
       get { return descriptor; }
     }
-    private static pbd::FileDescriptor descriptor;
+    private static pbr::FileDescriptor descriptor;
 
     static Uuid() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgp1dWlkLnByb3RvEgZldmVudHMiIQoEVVVJRBILCgNsb3cYASACKAQSDAoE", 
-            "aGlnaBgCIAIoBEJQCiFvcmcuY2xvdWRmb3VuZHJ5LmRyb3Bzb25kZS5ldmVu", 
+            "Cgp1dWlkLnByb3RvEgZldmVudHMiIQoEVVVJRBILCgNsb3cYASABKAQSDAoE", 
+            "aGlnaBgCIAEoBEJQCiFvcmcuY2xvdWRmb3VuZHJ5LmRyb3Bzb25kZS5ldmVu", 
             "dHNCC1V1aWRGYWN0b3J5qgIdQ2xvdWRGb3VuZHJ5LkRyb3Bzb25kZS5FdmVu", 
-          "dHM="));
-      pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
-        descriptor = root;
-        internal__static_events_UUID__Descriptor = Descriptor.MessageTypes[0];
-        internal__static_events_UUID__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::CloudFoundry.Dropsonde.Events.UUID, global::CloudFoundry.Dropsonde.Events.UUID.Builder>(internal__static_events_UUID__Descriptor,
-                new string[] { "Low", "High", });
-        pb::ExtensionRegistry registry = pb::ExtensionRegistry.CreateInstance();
-        RegisterAllExtensions(registry);
-        return registry;
-      };
-      pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-          new pbd::FileDescriptor[] {
-          }, assigner);
+            "dHNiBnByb3RvMw=="));
+      descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
+          new pbr::FileDescriptor[] { },
+          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
+            new pbr::GeneratedCodeInfo(typeof(global::CloudFoundry.Dropsonde.Events.UUID), new[]{ "Low", "High" }, null, null, null)
+          }));
     }
     #endregion
 
   }
   #region Messages
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class UUID : pb::GeneratedMessage<UUID, UUID.Builder> {
-    private UUID() { }
-    private static readonly UUID defaultInstance = new UUID().MakeReadOnly();
-    private static readonly string[] _uUIDFieldNames = new string[] { "high", "low" };
-    private static readonly uint[] _uUIDFieldTags = new uint[] { 16, 8 };
-    public static UUID DefaultInstance {
-      get { return defaultInstance; }
+  public sealed partial class UUID : pb::IMessage<UUID> {
+    private static readonly pb::MessageParser<UUID> _parser = new pb::MessageParser<UUID>(() => new UUID());
+    public static pb::MessageParser<UUID> Parser { get { return _parser; } }
+
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CloudFoundry.Dropsonde.Events.Uuid.Descriptor.MessageTypes[0]; }
     }
 
-    public override UUID DefaultInstanceForType {
-      get { return DefaultInstance; }
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
     }
 
-    protected override UUID ThisMessage {
-      get { return this; }
+    public UUID() {
+      OnConstruction();
     }
 
-    public static pbd::MessageDescriptor Descriptor {
-      get { return global::CloudFoundry.Dropsonde.Events.Uuid.internal__static_events_UUID__Descriptor; }
+    partial void OnConstruction();
+
+    public UUID(UUID other) : this() {
+      low_ = other.low_;
+      high_ = other.high_;
     }
 
-    protected override pb::FieldAccess.FieldAccessorTable<UUID, UUID.Builder> InternalFieldAccessors {
-      get { return global::CloudFoundry.Dropsonde.Events.Uuid.internal__static_events_UUID__FieldAccessorTable; }
+    public UUID Clone() {
+      return new UUID(this);
     }
 
     public const int LowFieldNumber = 1;
-    private bool hasLow;
     private ulong low_;
-    public bool HasLow {
-      get { return hasLow; }
-    }
     public ulong Low {
       get { return low_; }
+      set {
+        low_ = value;
+      }
     }
 
     public const int HighFieldNumber = 2;
-    private bool hasHigh;
     private ulong high_;
-    public bool HasHigh {
-      get { return hasHigh; }
-    }
     public ulong High {
       get { return high_; }
+      set {
+        high_ = value;
+      }
     }
 
-    public override bool IsInitialized {
-      get {
-        if (!hasLow) return false;
-        if (!hasHigh) return false;
+    public override bool Equals(object other) {
+      return Equals(other as UUID);
+    }
+
+    public bool Equals(UUID other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Low != other.Low) return false;
+      if (High != other.High) return false;
+      return true;
     }
 
-    public override void WriteTo(pb::ICodedOutputStream output) {
-      CalcSerializedSize();
-      string[] field_names = _uUIDFieldNames;
-      if (hasLow) {
-        output.WriteUInt64(1, field_names[1], Low);
-      }
-      if (hasHigh) {
-        output.WriteUInt64(2, field_names[0], High);
-      }
-      UnknownFields.WriteTo(output);
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Low != 0UL) hash ^= Low.GetHashCode();
+      if (High != 0UL) hash ^= High.GetHashCode();
+      return hash;
     }
 
-    private int memoizedSerializedSize = -1;
-    public override int SerializedSize {
-      get {
-        int size = memoizedSerializedSize;
-        if (size != -1) return size;
-        return CalcSerializedSize();
+    public override string ToString() {
+      return pb::JsonFormatter.Default.Format(this);
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Low != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Low);
+      }
+      if (High != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(High);
       }
     }
 
-    private int CalcSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (hasLow) {
-        size += pb::CodedOutputStream.ComputeUInt64Size(1, Low);
+    public int CalculateSize() {
+      int size = 0;
+      if (Low != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Low);
       }
-      if (hasHigh) {
-        size += pb::CodedOutputStream.ComputeUInt64Size(2, High);
+      if (High != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(High);
       }
-      size += UnknownFields.SerializedSize;
-      memoizedSerializedSize = size;
       return size;
     }
-    public static UUID ParseFrom(pb::ByteString data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static UUID ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static UUID ParseFrom(byte[] data) {
-      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
-    }
-    public static UUID ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
-    }
-    public static UUID ParseFrom(global::System.IO.Stream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static UUID ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    public static UUID ParseDelimitedFrom(global::System.IO.Stream input) {
-      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
-    }
-    public static UUID ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
-      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
-    }
-    public static UUID ParseFrom(pb::ICodedInputStream input) {
-      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
-    }
-    public static UUID ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
-    }
-    private UUID MakeReadOnly() {
-      return this;
+
+    public void MergeFrom(UUID other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Low != 0UL) {
+        Low = other.Low;
+      }
+      if (other.High != 0UL) {
+        High = other.High;
+      }
     }
 
-    public static Builder CreateBuilder() { return new Builder(); }
-    public override Builder ToBuilder() { return CreateBuilder(this); }
-    public override Builder CreateBuilderForType() { return new Builder(); }
-    public static Builder CreateBuilder(UUID prototype) {
-      return new Builder(prototype);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public sealed partial class Builder : pb::GeneratedBuilder<UUID, Builder> {
-      protected override Builder ThisBuilder {
-        get { return this; }
-      }
-      public Builder() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-      }
-      internal Builder(UUID cloneFrom) {
-        result = cloneFrom;
-        resultIsReadOnly = true;
-      }
-
-      private bool resultIsReadOnly;
-      private UUID result;
-
-      private UUID PrepareBuilder() {
-        if (resultIsReadOnly) {
-          UUID original = result;
-          result = new UUID();
-          resultIsReadOnly = false;
-          MergeFrom(original);
-        }
-        return result;
-      }
-
-      public override bool IsInitialized {
-        get { return result.IsInitialized; }
-      }
-
-      protected override UUID MessageBeingBuilt {
-        get { return PrepareBuilder(); }
-      }
-
-      public override Builder Clear() {
-        result = DefaultInstance;
-        resultIsReadOnly = true;
-        return this;
-      }
-
-      public override Builder Clone() {
-        if (resultIsReadOnly) {
-          return new Builder(result);
-        } else {
-          return new Builder().MergeFrom(result);
-        }
-      }
-
-      public override pbd::MessageDescriptor DescriptorForType {
-        get { return global::CloudFoundry.Dropsonde.Events.UUID.Descriptor; }
-      }
-
-      public override UUID DefaultInstanceForType {
-        get { return global::CloudFoundry.Dropsonde.Events.UUID.DefaultInstance; }
-      }
-
-      public override UUID BuildPartial() {
-        if (resultIsReadOnly) {
-          return result;
-        }
-        resultIsReadOnly = true;
-        return result.MakeReadOnly();
-      }
-
-      public override Builder MergeFrom(pb::IMessage other) {
-        if (other is UUID) {
-          return MergeFrom((UUID) other);
-        } else {
-          base.MergeFrom(other);
-          return this;
-        }
-      }
-
-      public override Builder MergeFrom(UUID other) {
-        if (other == global::CloudFoundry.Dropsonde.Events.UUID.DefaultInstance) return this;
-        PrepareBuilder();
-        if (other.HasLow) {
-          Low = other.Low;
-        }
-        if (other.HasHigh) {
-          High = other.High;
-        }
-        this.MergeUnknownFields(other.UnknownFields);
-        return this;
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input) {
-        return MergeFrom(input, pb::ExtensionRegistry.Empty);
-      }
-
-      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
-        PrepareBuilder();
-        pb::UnknownFieldSet.Builder unknownFields = null;
-        uint tag;
-        string field_name;
-        while (input.ReadTag(out tag, out field_name)) {
-          if(tag == 0 && field_name != null) {
-            int field_ordinal = global::System.Array.BinarySearch(_uUIDFieldNames, field_name, global::System.StringComparer.Ordinal);
-            if(field_ordinal >= 0)
-              tag = _uUIDFieldTags[field_ordinal];
-            else {
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              continue;
-            }
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            Low = input.ReadUInt64();
+            break;
           }
-          switch (tag) {
-            case 0: {
-              throw pb::InvalidProtocolBufferException.InvalidTag();
-            }
-            default: {
-              if (pb::WireFormat.IsEndGroupTag(tag)) {
-                if (unknownFields != null) {
-                  this.UnknownFields = unknownFields.Build();
-                }
-                return this;
-              }
-              if (unknownFields == null) {
-                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
-              }
-              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
-              break;
-            }
-            case 8: {
-              result.hasLow = input.ReadUInt64(ref result.low_);
-              break;
-            }
-            case 16: {
-              result.hasHigh = input.ReadUInt64(ref result.high_);
-              break;
-            }
+          case 16: {
+            High = input.ReadUInt64();
+            break;
           }
         }
-
-        if (unknownFields != null) {
-          this.UnknownFields = unknownFields.Build();
-        }
-        return this;
-      }
-
-
-      public bool HasLow {
-        get { return result.hasLow; }
-      }
-      public ulong Low {
-        get { return result.Low; }
-        set { SetLow(value); }
-      }
-      public Builder SetLow(ulong value) {
-        PrepareBuilder();
-        result.hasLow = true;
-        result.low_ = value;
-        return this;
-      }
-      public Builder ClearLow() {
-        PrepareBuilder();
-        result.hasLow = false;
-        result.low_ = 0UL;
-        return this;
-      }
-
-      public bool HasHigh {
-        get { return result.hasHigh; }
-      }
-      public ulong High {
-        get { return result.High; }
-        set { SetHigh(value); }
-      }
-      public Builder SetHigh(ulong value) {
-        PrepareBuilder();
-        result.hasHigh = true;
-        result.high_ = value;
-        return this;
-      }
-      public Builder ClearHigh() {
-        PrepareBuilder();
-        result.hasHigh = false;
-        result.high_ = 0UL;
-        return this;
       }
     }
-    static UUID() {
-      object.ReferenceEquals(global::CloudFoundry.Dropsonde.Events.Uuid.Descriptor, null);
-    }
+
   }
 
   #endregion
