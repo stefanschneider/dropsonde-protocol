@@ -41,6 +41,9 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System" />
+    <Reference Include="Google.Protobuf">
+      <HintPath>packages\Google.Protobuf.3.0.0-alpha4\lib\portable-net45+netcore45+wpa81+wp8\Google.Protobuf.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -69,9 +72,6 @@
     <Folder Include="CloudFoundry.Dropsonde.Events\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="protobuf\csharp\src\Google.Protobuf\Google.Protobuf.csproj">
-      <Project>{6908BDCE-D925-43F3-94AC-A531E6DF2591}</Project>
-      <Name>Google.Protobuf</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
